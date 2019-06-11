@@ -1,0 +1,144 @@
+\hypertarget{class_timer}{}\section{Référence de la classe Timer}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$timer.\+h$>$}
+
+
+
+Graphe de collaboration de Timer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_timer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer_a7bbdf7d44a20493674484af45b8f8a98}{Timer} (bool \+\_\+un\+Coup=false)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_timer_a7bbdf7d44a20493674484af45b8f8a98}{Timer\+::\+Timer}. \end{DoxyCompactList}\item 
+void \hyperlink{class_timer_a9a30698d13e0369d35307de5d156330f}{Lancer} (unsigned long \+\_\+milli\+Secondes)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_timer_a9a30698d13e0369d35307de5d156330f}{Timer\+::\+Lancer}. \end{DoxyCompactList}\item 
+void \hyperlink{class_timer_a17e620ab8d93dd449191b3ced782b153}{Lancer} (int \+\_\+heures, int \+\_\+minutes, int \+\_\+secondes)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_timer_a9a30698d13e0369d35307de5d156330f}{Timer\+::\+Lancer}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_aa26129870e5b0a3b2623b70b1412ad7e}{Scruter} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_timer_aa26129870e5b0a3b2623b70b1412ad7e}{Timer\+::\+Scruter}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \hyperlink{class_timer_a1423b1f13ea00903f9581020e5d40198}{millisecondes}
+\item 
+unsigned long \hyperlink{class_timer_aefa4811f3619dc170520bc43c86c36f6}{valeur\+Precedente}
+\begin{DoxyCompactList}\small\item\em Durée de l\textquotesingle{}attente. \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_a992bb5566966aba6e82a7f4ebfa90c4f}{un\+Coup}
+\begin{DoxyCompactList}\small\item\em valeur du temps précédent \end{DoxyCompactList}\item 
+bool \hyperlink{class_timer_aaf1ab0317d3937d55a19cf7fac56818b}{actif}
+\begin{DoxyCompactList}\small\item\em Mode du timer vrai une seule fois, faux mode infini. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Timer(bool \+\_\+un\+Coup=false)}{Timer(bool _unCoup=false)}}]{\setlength{\rightskip}{0pt plus 5cm}Timer\+::\+Timer (
+\begin{DoxyParamCaption}
+\item[{bool}]{\+\_\+un\+Coup = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_timer_a7bbdf7d44a20493674484af45b8f8a98}{}\label{class_timer_a7bbdf7d44a20493674484af45b8f8a98}
+
+
+\hyperlink{class_timer_a7bbdf7d44a20493674484af45b8f8a98}{Timer\+::\+Timer}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+un\+Coup} & permet de définir le mode du timer par défaut mode infini, si true alors une seule fois\\
+\hline
+\end{DoxyParams}
+Constructeur de la classe. Le timer est inactif, il faut appelé Lancer ensuite. 
+
+\subsection{Documentation des fonctions membres}
+\index{Timer@{Timer}!Lancer@{Lancer}}
+\index{Lancer@{Lancer}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Lancer(unsigned long \+\_\+milli\+Secondes)}{Lancer(unsigned long _milliSecondes)}}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::\+Lancer (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{\+\_\+milli\+Secondes}
+\end{DoxyParamCaption}
+)}\hypertarget{class_timer_a9a30698d13e0369d35307de5d156330f}{}\label{class_timer_a9a30698d13e0369d35307de5d156330f}
+
+
+\hyperlink{class_timer_a9a30698d13e0369d35307de5d156330f}{Timer\+::\+Lancer}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+milli\+Secondes} & Durée de la tempo\\
+\hline
+\end{DoxyParams}
+Lance le timer avec le temps en millisecondes \index{Timer@{Timer}!Lancer@{Lancer}}
+\index{Lancer@{Lancer}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Lancer(int \+\_\+heures, int \+\_\+minutes, int \+\_\+secondes)}{Lancer(int _heures, int _minutes, int _secondes)}}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::\+Lancer (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+heures, }
+\item[{int}]{\+\_\+minutes, }
+\item[{int}]{\+\_\+secondes}
+\end{DoxyParamCaption}
+)}\hypertarget{class_timer_a17e620ab8d93dd449191b3ced782b153}{}\label{class_timer_a17e620ab8d93dd449191b3ced782b153}
+
+
+\hyperlink{class_timer_a9a30698d13e0369d35307de5d156330f}{Timer\+::\+Lancer}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+heures} & \\
+\hline
+{\em \+\_\+minutes} & \\
+\hline
+{\em \+\_\+secondes} & \\
+\hline
+\end{DoxyParams}
+Lance le timer avec le temps exprimé en heures, minutes, secondes \index{Timer@{Timer}!Scruter@{Scruter}}
+\index{Scruter@{Scruter}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Scruter()}{Scruter()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::\+Scruter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_timer_aa26129870e5b0a3b2623b70b1412ad7e}{}\label{class_timer_aa26129870e5b0a3b2623b70b1412ad7e}
+
+
+\hyperlink{class_timer_aa26129870e5b0a3b2623b70b1412ad7e}{Timer\+::\+Scruter}. 
+
+\begin{DoxyReturn}{Renvoie}
+vrai si le temps est écoulé, faux sinon
+\end{DoxyReturn}
+Si le timer est configuré pour une seule fois, l\textquotesingle{}attribut actif repasse à faux 
+
+\subsection{Documentation des données membres}
+\index{Timer@{Timer}!actif@{actif}}
+\index{actif@{actif}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{actif}{actif}}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::actif\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_timer_aaf1ab0317d3937d55a19cf7fac56818b}{}\label{class_timer_aaf1ab0317d3937d55a19cf7fac56818b}
+
+
+Mode du timer vrai une seule fois, faux mode infini. 
+
+\index{Timer@{Timer}!millisecondes@{millisecondes}}
+\index{millisecondes@{millisecondes}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{millisecondes}{millisecondes}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Timer\+::millisecondes\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_timer_a1423b1f13ea00903f9581020e5d40198}{}\label{class_timer_a1423b1f13ea00903f9581020e5d40198}
+\index{Timer@{Timer}!un\+Coup@{un\+Coup}}
+\index{un\+Coup@{un\+Coup}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{un\+Coup}{unCoup}}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer\+::un\+Coup\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_timer_a992bb5566966aba6e82a7f4ebfa90c4f}{}\label{class_timer_a992bb5566966aba6e82a7f4ebfa90c4f}
+
+
+valeur du temps précédent 
+
+\index{Timer@{Timer}!valeur\+Precedente@{valeur\+Precedente}}
+\index{valeur\+Precedente@{valeur\+Precedente}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{valeur\+Precedente}{valeurPrecedente}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Timer\+::valeur\+Precedente\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_timer_aefa4811f3619dc170520bc43c86c36f6}{}\label{class_timer_aefa4811f3619dc170520bc43c86c36f6}
+
+
+Durée de l\textquotesingle{}attente. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{timer_8h}{timer.\+h}\item 
+\hyperlink{timer_8cpp}{timer.\+cpp}\end{DoxyCompactItemize}

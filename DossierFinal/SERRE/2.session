@@ -1,0 +1,13 @@
+window_sizes 1280 848 375 899 716 80
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128130 // Classe
+    816 691 80 A3 0 0
+end
+show_stereotypes
+selected deploymentview_ref 128258 // ControleurDeSerreAvecHumidite
+open
+  classview_ref 128130 // diagrammeDeClasse
+  classview_ref 128258 // ControleurDeSerreAvecHumidite
+end
+end

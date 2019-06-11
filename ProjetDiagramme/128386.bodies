@@ -1,0 +1,325 @@
+class StockageDonnees
+!!!131074.cpp!!!	StockageDonnees()
+  if(rtc.begin())
+  {
+    Serial.println("RTC OK");
+  }
+
+  serverAddr = IPAddress(172, 18, 58, 213);
+  ESP32Addr = IPAddress( 172, 18, 58, 248);
+   
+!!!131330.cpp!!!	EnvoyerDonneesBdd(in conn : MySQL_Connection) : void
+
+  char INSERT_MESUREINTERIEUR[255];
+  char INSERT_MESUREZONE[255];
+
+  // creation du curseur mySQL
+  cursor = new MySQL_Cursor(&conn);
+ 
+  //convertit les chaine de caractère en tableau de caractère
+  requeteMesureInterieur.toCharArray(INSERT_MESUREINTERIEUR, 255);
+  requeteMesureZone.toCharArray(INSERT_MESUREZONE, 255);
+
+  if (conn.connected()) {
+    
+    //Permet d'envoyer les requetes SQL
+    cursor->execute(INSERT_MESUREINTERIEUR);
+    cursor->execute(INSERT_MESUREZONE);
+  }
+!!!131458.cpp!!!	EnregistrerDonneesFichierLocal(in temperature : float, in hygrometrie : float, in luminosite : float) : void
+  //Permet d'ouvrir le fichier en écriture si il n'est pas deja ouvert
+  if (fichier == false) {
+    OuvrirFichierDonneesMeteorologiquesEcriture();
+  }
+
+  String chaine, dates;
+ //Traitement pour concatener toutes les donnees dans une chaine de caractere
+  dates = RecupereDate();
+  chaine += temperature;
+  chaine += ",";
+  chaine += hygrometrie;
+  chaine += ",";
+  chaine += luminosite;
+  chaine += ",'";
+  chaine += dates;
+  chaine += "'";
+
+  //la chaine de donnees est imprimee dans le fichier des donnees meteorologiques 
+  fichier.println(chaine);
+!!!131586.cpp!!!	LireDonneesFichierLocal() : String
+
+  if (fichier == false) {
+    //permet d'ouvrir le fichier en lecture
+    OuvrirFichierDonneesMeteorologiquesLecture();
+    
+  }
+
+
+  String tampon;
+  char carlu;
+
+  if (fichier.read() != -1) {
+    do {
+      carlu = fichier.read();
+
+      if (carlu != -1)
+      {
+        tampon += carlu;
+      }
+
+    }
+    while (carlu != '\n');
+  } else {
+    tampon = "";
+  }
+
+  return tampon;
+
+!!!131842.cpp!!!	ConnexionWifi() : void
+
+  while (!Serial);
+
+  Serial.printf("\nConnexion à %s", loginWIFI);
+  status = WiFi.begin(loginWIFI, mdpWIFI);
+
+  if (status == WL_CONNECTED) {
+    Serial.printf("Connecté au réseau %s. \n", loginWIFI);
+  } else {
+    WiFi.begin(loginWIFI, mdpWIFI);
+  }
+!!!131970.cpp!!!	ConnexionServeur() : MySQL_Connection
+
+  MySQL_Connection conn(&client);
+
+  //Permet de se connecter au serveur
+  if (conn.connect(serverAddr, 3306, loginUtilisateurServeur, mdpUtilisateurServeur)) {
+    Serial.println("CONNEXION SERVEUR ETABLI");
+  }
+  else {
+    Serial.println("ECHEC CONNEXION SERVEUR");
+  }
+  return conn;
+!!!132226.cpp!!!	DefinirParametresCarte() : void
+  //definit l'adresse mac et ip de l'objet connecté
+  Ethernet.begin(ESP32Mac, ESP32Addr);
+
+!!!132354.cpp!!!	InsererDonneesMesuresInterieurSerre(in temperature : float, in hygrometrie : float, in luminosite : float) : void
+
+  String chaineTemperature, chaineHygrometrie, chaineLuminosite, date;
+  //convertit les données météorologique(float) en une chaine de caractère
+  chaineTemperature = String(temperature);
+
+  chaineHygrometrie = String(hygrometrie);
+
+  chaineLuminosite = String(luminosite);
+
+  date = RecupereDate();
+  //insere les données dans la requete SQL
+  requeteMesureInterieur = "INSERT INTO laSerre.MesuresSerreInterieur(temperature,hygrometrie,luminosite,DateMesureInterieur,idSerre) VALUES (" + chaineTemperature + "," + chaineHygrometrie + "," + chaineLuminosite + ",'" + date + "' ," + IDSERRE + ")";
+  
+!!!132482.cpp!!!	InsererDonneesMesuresZone(in debitEau : float, in humiditeSol : float) : void
+
+  String chainedebitEau, chainehumiditeSol, date;
+  //convertit les données liées aux vannes(float) en une chaine de caractère
+  chainedebitEau = String(debitEau);
+
+  chainehumiditeSol = String(humiditeSol);
+
+  date = RecupereDate();
+  //insere les données dans la requete SQL
+  requeteMesureZone = "INSERT INTO laSerre.MesuresZone(debitEau,humiditeSol,dateMesure,idZone) VALUES (" + chainedebitEau + "," + chainehumiditeSol + ",'" + date + "' ," + IDZONE + ")";
+  
+!!!132610.cpp!!!	VerifierConnexionWifi() : void
+
+  if (status != WL_CONNECTED) {
+    WiFi.begin(loginWIFI, mdpWIFI);
+  } else {
+    Serial.printf("Connecté au réseau %s. \n", loginWIFI);
+  }
+!!!132738.cpp!!!	VerifierConnexionServeur(in conn2 : MySQL_Connection) : MySQL_Connection
+  //permet de vérifier si la connection est toujours établie
+  if (conn2.connected()) {
+    Serial.println("Connecté au SERVEUR");
+  } else {
+    // si ce n'est pas le cas, on va se reconnecter au serveur
+    VerifierConnexionWifi();
+    Serial.println("Plus de connexion au serveur");
+    conn2.close();
+    if (conn2.connect(serverAddr, 3306, loginUtilisateurServeur, mdpUtilisateurServeur)) {
+      Serial.println("Connecté au serveur");
+      //Permet de fermer le fichier local car la connexion est revenue
+      fermeture = true;
+    }
+  }
+  return conn2;
+!!!132866.cpp!!!	OuvrirFichierDonneesMeteorologiquesLecture() : void
+  pinMode(5, OUTPUT);
+
+  
+  //Permet d'ouvrir le fichier donnees meteorologique en lecture
+  fichier = SD.open("/donnees.txt", FILE_READ);
+!!!132994.cpp!!!	OuvrirFichierDonneesMeteorologiquesEcriture() : void
+  pinMode(5, OUTPUT);
+
+//Permet d'ouvrir le fichier donnees meteorologique en écriture
+  fichier = SD.open("/donnees.txt", FILE_WRITE);
+
+!!!133122.cpp!!!	OuvrirFichierSeuilEcriture() : void
+  pinMode(5, OUTPUT);
+
+ 
+//Permet d'ouvrir le fichier donnees seuils en écriture
+  fichierSeuils = SD.open("/seuils.txt", FILE_WRITE);
+
+!!!133250.cpp!!!	RecupereDate() : String
+  now = rtc.now();
+  String annee, mois, jour, heure, minute, seconde;
+
+  annee = String(now.year());
+  mois = String(now.month());
+  jour = String(now.day());
+  heure = String(now.hour());
+  minute = String(now.minute());
+  seconde = String(now.second());
+  String date;
+  date = annee + "-" + mois + "-" + jour + " " + heure + ":" + minute + ":" + seconde;
+
+  return date;
+!!!133634.cpp!!!	RecupererSeuilsVannes(in conn : MySQL_Connection) : String
+   //requete permettant de recuperer les seuils des zones
+   char query[128] = "SELECT idZone, minHumidite,maxHumidite FROM laSerre.Zone WHERE idSerre =1 ";
+
+  String chaine;
+  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+
+  // Permet d'executer la requete SELECT, les resultats sont contenus dans le curseur 
+  cur_mem->execute(query);
+  // Fetch the columns and print them
+  column_names *cols = cur_mem->get_columns();
+ 
+  // Read the rows and print them
+  row_values *row = NULL;
+  do {
+    row = cur_mem->get_next_row();
+    if (row != NULL) {
+      for (int f = 0; f < cols->num_fields; f++) {
+        // Permet d'inserer la donnees dans la string
+        chaine += (String)row->values[f];
+        if (f < cols->num_fields - 1) {
+          //permet d'inserer un espace entre chaque donnee
+          chaine += ' ';
+        }
+      }
+      //si la premiere ligne de donnee a ete lu, on fait un retour chariot
+      chaine += "\n";
+    }
+  } while (row != NULL);
+  // Supprime le curseur
+  delete cur_mem;
+  
+  return chaine;
+!!!133762.cpp!!!	EnregistrerDonneesZonesFichierLocal(in humiditeDuSol : float, in debitEau : float) : void
+
+  //Permet d'ouvrir le fichier en écriture si il n'est pas deja ouvert
+  if (fichierZone == false) {
+    OuvrirFichierZoneEcriture();
+  }
+
+  String chaine, dates;
+
+  dates = RecupereDate();
+  chaine += humiditeDuSol;
+  chaine += ",";
+  chaine += debitEau;
+  chaine += ",'";
+  chaine += dates;
+  chaine += "'";
+
+  fichierZone.println(chaine);
+  if (fermeture == true) {
+    fichierZone.close();
+  }
+!!!133890.cpp!!!	InsererDonneesMesuresLocalesInterieurSerre(in chaine : String) : void
+
+  if (chaine != "") {
+    //insere les données dans la requete SQL
+    requeteMesureLocaleInterieur = "INSERT INTO laSerre.MesuresSerreInterieur(temperature,hygrometrie,luminosite,DateMesureInterieur,idSerre) VALUES (" + chaine + "," + IDSERRE + ")";
+  }
+!!!134018.cpp!!!	EnvoyerDonneesLocalesBdd(in conn : MySQL_Connection) : void
+  char INSERT_MESURELOCALE[255];
+
+  // creation du curseur mySQL
+  cursor = new MySQL_Cursor(&conn);
+
+  //convertit les chaine de caractère en tableau de caractère
+  requeteMesureLocaleInterieur.toCharArray(INSERT_MESURELOCALE, 255);
+
+  if (conn.connected()) {
+    //Permet d'envoyer les requetes SQL
+    cursor->execute(INSERT_MESURELOCALE);
+  }
+!!!134146.cpp!!!	EnregistrerDonneesSeuilsFichierLocal(in chaine : String) : void
+
+  //Permet d'ouvrir le fichier en écriture si il n'est pas deja ouvert
+  if (fichierSeuils == false) {
+    OuvrirFichierSeuilEcriture();
+  }
+
+  fichierSeuils.println(chaine);
+  
+  fichierSeuils.close();
+!!!134274.cpp!!!	OuvrirFichierZoneEcriture() : void
+  pinMode(5, OUTPUT);
+
+
+//Permet d'ouvrir le fichier donnees zones en écriture
+  fichierZone = SD.open("/zones.txt", FILE_WRITE);
+!!!134402.cpp!!!	RecupererModeProgramme(in conn : MySQL_Connection) : String
+
+  char query[128] = "SELECT modeArrosage, heureOuverture,periodiciteArrosage FROM laSerre.Zone WHERE idSerre =1 ";
+  
+  String chaine;
+
+  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+
+  // Permet d'executer la requete SELECT
+  cur_mem->execute(query);
+  // Fetch the columns and print them
+  column_names *cols = cur_mem->get_columns();
+
+  // Read the rows and print them
+  row_values *row = NULL;
+  do {
+    row = cur_mem->get_next_row();
+    if (row != NULL) {
+      for (int f = 0; f < cols->num_fields; f++) {
+        // Permet d'inserer la donnees dans la string
+        chaine += (String)row->values[f];
+        if (f < cols->num_fields - 1) {
+       //permet d'inserer un espace entre chaque donnee
+          chaine += ' ';
+        }
+      }
+      //si la premiere ligne de donnee a ete lu, on fait un retour chariot
+      chaine += "\n";
+    }
+  } while (row != NULL);
+  // Supprime le curseur
+  delete cur_mem;
+  return chaine;
+!!!134530.cpp!!!	EnregistrerDonneesRecupererModeProgrammeFichierLocal(in chaine : String) : void
+
+  //Permet d'ouvrir le fichier en écriture si il n'est pas deja ouvert
+  if (fichierModeProgramme == false) {
+    OuvrirFichierModeProgramme();
+  }
+
+  fichierModeProgramme.println(chaine);
+
+  fichierModeProgramme.close();
+
+!!!134658.cpp!!!	OuvrirFichierModeProgramme() : void
+  pinMode(5, OUTPUT);
+
+  fichierModeProgramme = SD.open("/modeProgramme.txt", FILE_WRITE);
+

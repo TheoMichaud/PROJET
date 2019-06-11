@@ -1,0 +1,14 @@
+window_sizes 1600 850 375 1219 718 80
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128002 // classes
+    1219 718 100 C-Landscape 0 0
+end
+show_stereotypes
+selected class_ref 128898 // Vanne
+open
+  classview_ref 128002 // pourreverse
+  classview_ref 128130 // GestionSerreIntegrationSansSerialPrint
+  deploymentview_ref 128130 // GestionSerreIntegrationSansSerialPrint
+end
+end

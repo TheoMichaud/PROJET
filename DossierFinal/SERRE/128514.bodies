@@ -1,0 +1,25 @@
+class Timer
+!!!128898.cpp!!!	Timer(in _unCoup : bool = false)
+
+!!!129026.cpp!!!	Lancer(in _milliSecondes : ulong) : void
+    millisecondes = _milliSecondes;
+    valeurPrecedente = millis();
+    actif = true;
+    Serial.print("Temps avant impulsion : ");
+    Serial.println(valeurPrecedente);
+!!!129154.cpp!!!	Lancer(in _heures : int, in _minutes : int, in _secondes : int) : void
+    millisecondes = (60 * ( 60 * _heures + _minutes) + _secondes) * 1000 ;
+    valeurPrecedente = millis();
+    actif = true;
+!!!129282.cpp!!!	Scruter() : bool
+    bool retour = false;
+    if(actif && (millis() - valeurPrecedente >= millisecondes))
+    {
+        valeurPrecedente = millis();
+        retour = true;
+        if(unCoup)
+          actif = false;
+      Serial.print("Temps après impulsion : ");
+      Serial.println(valeurPrecedente);
+    }
+    return retour;

@@ -1,0 +1,74 @@
+class Zone
+!!!135426.cpp!!!	Zone(in nbZone : int, in _commandeVanne : gpio_num_t, in _brocheHumidite : gpio_num_t, inout _cycles : CyclesArrossage)
+  seuilMin = cycles->ObtenirSeuilMin(numZone-1);
+  seuilMax = cycles->ObtenirSeuilMax(numZone-1);
+
+
+  etatZone = ATTENTE; 
+  
+!!!135554.cpp!!!	~Zone()
+  
+!!!135682.cpp!!!	Controler(in _parametre : String) : int
+
+  char parametre = _parametre.charAt(0);
+
+switch (parametre)
+   {
+      case 'm':
+        timerHumidite.Arreter();
+
+              
+        if(_parametre.charAt(1) == 'o')
+        {
+
+          laVanne.Controler('O');
+        }
+           
+        if(_parametre.charAt(1) == 'f') 
+        {
+
+          laVanne.Controler('F');
+        }
+           
+       
+        break;
+
+      case 'p':
+        timerHumidite.Arreter();
+
+        break;
+
+      case 'a':
+
+        timerHumidite.Lancer(0,0,10);
+
+        
+        
+        
+        
+          
+          
+        break;
+      default:
+      if(timerHumidite.Scruter())
+        {
+        mesureHumidite = leCapteur.PreleverHumidite();
+        if((mesureHumidite<= seuilMin) && (etatZone == ATTENTE))
+        {
+
+          laVanne.Controler('O');
+          etatZone = ARROSAGE;
+        }
+        if((mesureHumidite >= seuilMax) && (etatZone == ARROSAGE ))
+        {
+
+          laVanne.Controler('F');
+          etatZone = ATTENTE;
+        }
+        }
+      break;  
+   }
+
+   laVanne.Controler('X');
+
+

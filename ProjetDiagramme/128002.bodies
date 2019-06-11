@@ -1,0 +1,21 @@
+class Capteur
+!!!128002.cpp!!!	Capteur()
+
+  bool status;
+  
+  status = bme.begin();
+
+!!!128130.cpp!!!	~Capteur()
+
+!!!128258.cpp!!!	ReleverTemperature() : void
+
+  temperature = bme.readTemperature();
+
+!!!128386.cpp!!!	ReleverHygrometrie() : void
+
+  hygrometrie = bme.readHumidity();
+
+!!!128514.cpp!!!	ReleverLuminosite() : void
+  
+  luminosite = tsl.getLuminosity(TSL2591_VISIBLE);
+

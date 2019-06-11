@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1962" height="1453" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="794" y="465">+zones</text>
+</g>
+<g>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="757" y="465">[2]</text>
+</g>
+<g>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="326" y="339">-cycles</text>
+</g>
+<g>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1169" y="217">-leCapteur</text>
+</g>
+<g>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="794" y="209">-laVanne</text>
+</g>
+<g>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="162" y="446">-cycles</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="901" y="515" width="3" height="213" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="667" y="725" width="237" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="663" y="511" width="238" height="214" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="782" y="522">ControleurDeSerre</text>
+	<line stroke="black" stroke-opacity="1" x1="663" y1="529" x2="901" y2="529" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="540">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="540">incoming : String</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="556">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="556">liaisonSmartphone : BluetoothSerial</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="572">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="572">commande : char</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="588">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="588">carlu : char</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="604">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="604">numZone : char</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="620">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="620">i : int=  0</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="636">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="636">chaine : String</text>
+	<line stroke="black" stroke-opacity="1" x1="663" y1="643" x2="901" y2="643" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="654">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="654">ControleurDeSerre()</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="670">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="670">~ControleurDeSerre()</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="686">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="686">Piloter() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="702">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="702">PiloterCapteurs() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="667" y="718">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="681" y="718">Initialisation() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1164" y="235" width="3" height="213" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="404" y="445" width="763" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="400" y="231" width="764" height="214" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="782" y="242">Zone</text>
+	<line stroke="black" stroke-opacity="1" x1="400" y1="249" x2="1164" y2="249" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="260">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="260">numZone : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="276">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="276">incoming : String</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="292">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="292">seuilMin : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="308">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="308">seuilMax : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="324">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="324">mesureHumidite : int</text>
+	<line stroke="black" stroke-opacity="1" x1="400" y1="331" x2="1164" y2="331" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="342">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="342">Zone(in nbZone : int, in _commandeVanne : gpio_num_t, in _brocheHumidite : gpio_num_t, inout _cycles : CyclesArrossage)</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="358">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="358">~Zone()</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="374">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="374">Controler(in _parametre : String) : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="390">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="390">ModifierDateHeure() : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="406">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="406">ModifierSeuilHumidite() : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="422">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="422">ModifierPeriodicite() : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="404" y="438">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="418" y="438">ModifierDuree() : int</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1946" y="587" width="3" height="853" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1062" y="1437" width="887" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="1058" y="583" width="888" height="854" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1502" y="594">StockageDonnees</text>
+	<line stroke="black" stroke-opacity="1" x1="1058" y1="601" x2="1946" y2="601" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="612">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="612">i : int= 0</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="628">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="628">client : WiFiClient</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="644">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="644">fermeture : boolean=  false</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="660">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="660">status : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="676">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="676">rtc : RTC_DS3231</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="692">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="692">requeteMesureInterieur : String=  &quot; &quot;</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="708">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="708">requeteMesureZone : String=  &quot; &quot;</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="724">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="724">requeteMesureLocaleInterieur : String=  &quot;&quot;</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="740">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="740">cursor : MySQL_Cursor</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="756">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="756">conn : MySQL_Connection</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="772">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="772">fichier : File</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="788">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="788">fichierZone : File</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="804">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="804">fichierSeuils : File</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="820">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="820">fichierModeProgramme : File</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="836">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="836">now : DateTime</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="852">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="852">ESP32Mac : byte [[6]]=  { 0xDE , 0xAD , 0xBE , 0xEF , 0xFE , 0xED }</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="868">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="868">ESP32Addr : IPAddress</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="884">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="884">serverAddr : IPAddress</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="900">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="900">loginUtilisateurServeur : char [[50]]=  IDSERVEUR</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="916">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="916">mdpUtilisateurServeur : char [[50]]=  MDPSERVEUR</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="932">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="932">loginWIFI : char [[50]]=  IDWIFI</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="948">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="948">mdpWIFI : char [[50]]=  MDPWIFI</text>
+	<line stroke="black" stroke-opacity="1" x1="1058" y1="955" x2="1946" y2="955" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="966">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="966">StockageDonnees()</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="982">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="982">~StockageDonnees()</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="998">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="998">EnvoyerDonneesBdd(in conn : MySQL_Connection) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1014">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1014">EnregistrerDonneesFichierLocal(in temperature : float, in hygrometrie : float, in luminosite : float) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1030">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1030">LireDonneesFichierLocal() : String</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1046">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1046">ControlerFichier() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1062">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1062">ConnexionWifi() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1078">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1078">ConnexionServeur() : MySQL_Connection</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1094">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1094">MemoriserIncidentPerteConnexion() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1110">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1110">DefinirParametresCarte() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1126">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1126">InsererDonneesMesuresInterieurSerre(in temperature : float, in hygrometrie : float, in luminosite : float) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1142">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1142">InsererDonneesMesuresZone(in debitEau : float, in humiditeSol : float) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1158">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1158">VerifierConnexionWifi() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1174">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1174">VerifierConnexionServeur(in conn2 : MySQL_Connection) : MySQL_Connection</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1190">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1190">OuvrirFichierDonneesMeteorologiquesLecture() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1206">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1206">OuvrirFichierDonneesMeteorologiquesEcriture() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1222">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1222">OuvrirFichierSeuilEcriture() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1238">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1238">RecupereDate() : String</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1254">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1254">VerifierDonneesFichierLocal() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1270">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1270">MemoriserDonneesFichierLocal() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1286">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1286">GererPerteConnexion(in temperature : float, in hygrometrie : float, in luminosite : float, in connection : MySQL_Connection) : MySQL_Connection</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1302">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1302">RecupererSeuilsVannes(in conn : MySQL_Connection) : String</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1318">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1318">EnregistrerDonneesZonesFichierLocal(in humiditeDuSol : float, in debitEau : float) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1334">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1334">InsererDonneesMesuresLocalesInterieurSerre(in chaine : String) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1350">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1350">EnvoyerDonneesLocalesBdd(in conn : MySQL_Connection) : MySQL_Connection</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1366">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1366">EnregistrerDonneesSeuilsFichierLocal(in chaine : String) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1382">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1382">OuvrirFichierZoneEcriture() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1398">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1398">RecupererModeProgramme(in conn : MySQL_Connection) : String</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1414">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1414">EnregistrerDonneesRecupererModeProgrammeFichierLocal(in chaine : String) : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="1062" y="1430">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="1076" y="1430">OuvrirFichierModeProgramme() : void</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="784" y1="449" x2="778" y2="455" />
+	<line stroke="black" stroke-opacity="1" x1="784" y1="449" x2="790" y2="455" />
+	<line stroke="black" stroke-opacity="1" x1="784" y1="510" x2="784" y2="449" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="312" y="264" width="3" height="165" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="-6" y="426" width="321" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="-10" y="260" width="322" height="166" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="151" y="271">CyclesArrossage</text>
+	<line stroke="black" stroke-opacity="1" x1="-10" y1="278" x2="312" y2="278" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="289">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="289">brocheCarteSD : gpio_num_t</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="305">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="305">seuilZoneMin : int [[2]]</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="321">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="321">seuilZoneMax : int [[2]]</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="337">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="337">valeurDefaut : bool</text>
+	<line stroke="black" stroke-opacity="1" x1="-10" y1="344" x2="312" y2="344" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="355">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="355">CyclesArrossage(in _brocheCarteSD : gpio_num_t)</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="371">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="371">LireCarteSD() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="387">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="387">LireCarteSDModeProg() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="403">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="403">ObtenirSeuilMax(in _zone : int) : int</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="-6" y="419">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="8" y="419">ObtenirSeuilMin(in _zone : int) : int</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="662" y1="623" x2="152" y2="623" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="316" y1="348" x2="322" y2="353" />
+	<line stroke="black" stroke-opacity="1" x1="316" y1="348" x2="321" y2="341" />
+	<line stroke="black" stroke-opacity="1" x1="399" y1="343" x2="316" y2="348" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1350" y1="532" x2="1344" y2="525" />
+	<line stroke="black" stroke-opacity="1" x1="1350" y1="532" x2="1343" y2="537" />
+	<line stroke="black" stroke-opacity="1" x1="905" y1="527" x2="1350" y2="532" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="905,527 911,521 916,527 910,533" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1168" y1="343" x2="1314" y2="346" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="1168,343 1174,337 1179,343 1173,349" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="152" y1="430" x2="146" y2="436" />
+	<line stroke="black" stroke-opacity="1" x1="152" y1="430" x2="158" y2="436" />
+	<line stroke="black" stroke-opacity="1" x1="152" y1="623" x2="152" y2="430" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="917" y="43" width="3" height="149" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="651" y="189" width="269" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="647" y="39" width="270" height="150" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="782" y="50">Vanne</text>
+	<line stroke="black" stroke-opacity="1" x1="647" y1="57" x2="917" y2="57" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="68">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="68">brocheImpulsion : gpio_num_t</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="84">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="84">sensA : gpio_num_t {readOnly}</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="100">-</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="100">sensB : gpio_num_t {readOnly}</text>
+	<line stroke="black" stroke-opacity="1" x1="647" y1="107" x2="917" y2="107" />
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="118">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="118">Vanne(in _brocheImpulsion : gpio_num_t)</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="134">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="134">~Vanne()</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="150">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="150">Ouvrir() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="166">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="166">Fermer() : void</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" font-weight="bold" x="651" y="182">+</text>
+	<text font-family="Sans Serif" font-size="9" fill="#000000" xml:space="preserve" x="665" y="182">Controler(in commande : char) : int</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1242" y1="228" x2="1234" y2="223" />
+	<line stroke="black" stroke-opacity="1" x1="1242" y1="228" x2="1237" y2="235" />
+	<line stroke="black" stroke-opacity="1" x1="1168" y1="247" x2="1242" y2="228" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="1168,247 1172,239 1179,244 1175,251" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="921" y1="119" x2="1530" y2="122" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="921,119 927,113 932,119 926,125" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="784" y1="193" x2="778" y2="199" />
+	<line stroke="black" stroke-opacity="1" x1="784" y1="193" x2="790" y2="199" />
+	<line stroke="black" stroke-opacity="1" x1="784" y1="230" x2="784" y2="193" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="784,230 778,224 784,218 790,224" />
+</g>
+</svg>

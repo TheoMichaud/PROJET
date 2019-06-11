@@ -1,0 +1,104 @@
+\hypertarget{class_controleur_de_serre}{}\section{Référence de la classe Controleur\+De\+Serre}
+\label{class_controleur_de_serre}\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+
+
+{\ttfamily \#include $<$controleur\+De\+Serre.\+h$>$}
+
+
+
+Graphe de collaboration de Controleur\+De\+Serre\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_controleur_de_serre__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_controleur_de_serre_afe055fb82c48b1c58575bba396d8d09f}{Controleur\+De\+Serre} ()
+\item 
+\hyperlink{class_controleur_de_serre_a657ac6eb145dacc226d9de1adaa9b2ab}{$\sim$\+Controleur\+De\+Serre} ()
+\item 
+void \hyperlink{class_controleur_de_serre_ab2b0f97cc39a24b330e214901f1c1323}{Piloter} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_zone}{Zone} $\ast$ \hyperlink{class_controleur_de_serre_ad0cfc26f13ccea8cc304763caa32d3a5}{zones} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_controleur_de_serre_aff14cbd8c5c61d76d592922ad81264d8}{incoming}
+\item 
+Bluetooth\+Serial \hyperlink{class_controleur_de_serre_a256aa95390c10b20876951613411372d}{liaison\+Smartphone}
+\item 
+char \hyperlink{class_controleur_de_serre_adfb41079ae94c40c8eaeb784b485c018}{commande}
+\item 
+char \hyperlink{class_controleur_de_serre_a193c19856f0c0b34cd405eabce6ddfab}{carlu}
+\item 
+char \hyperlink{class_controleur_de_serre_a743d1b27b4f77a807a199ef418a236d4}{num\+Zone}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{Controleur\+De\+Serre()}{ControleurDeSerre()}}]{\setlength{\rightskip}{0pt plus 5cm}Controleur\+De\+Serre\+::\+Controleur\+De\+Serre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_controleur_de_serre_afe055fb82c48b1c58575bba396d8d09f}{}\label{class_controleur_de_serre_afe055fb82c48b1c58575bba396d8d09f}
+\hyperlink{class_controleur_de_serre}{Controleur\+De\+Serre}
+
+Constructeur de la classe, on va initialiser dans un tableau nos différentes zones ici 4 et on va démarrer la liaison bluetooth. \index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!````~Controleur\+De\+Serre@{$\sim$\+Controleur\+De\+Serre}}
+\index{````~Controleur\+De\+Serre@{$\sim$\+Controleur\+De\+Serre}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{$\sim$\+Controleur\+De\+Serre()}{~ControleurDeSerre()}}]{\setlength{\rightskip}{0pt plus 5cm}Controleur\+De\+Serre\+::$\sim$\+Controleur\+De\+Serre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_controleur_de_serre_a657ac6eb145dacc226d9de1adaa9b2ab}{}\label{class_controleur_de_serre_a657ac6eb145dacc226d9de1adaa9b2ab}
+\+::$\sim$\+Controleur\+De\+Serre
+
+Déstructeur de la classe, on va venir supprimer, effacer les zones crées dans le constructeur. 
+
+\subsection{Documentation des fonctions membres}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!Piloter@{Piloter}}
+\index{Piloter@{Piloter}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{Piloter()}{Piloter()}}]{\setlength{\rightskip}{0pt plus 5cm}void Controleur\+De\+Serre\+::\+Piloter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_controleur_de_serre_ab2b0f97cc39a24b330e214901f1c1323}{}\label{class_controleur_de_serre_ab2b0f97cc39a24b330e214901f1c1323}
+\hyperlink{class_controleur_de_serre}{Controleur\+De\+Serre}
+
+Première Partie \+: Tant que la liaison bluetooth fonctionne on récupére la chaine de caractère envoyée
+
+Deuxième Partie \+: On compare la chaine de caractère, si le premier caractère est un z on regarde le deuxième pour obtenir le numéro de la zone. puis on appelle la méthode Controler (). 
+
+\subsection{Documentation des données membres}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!carlu@{carlu}}
+\index{carlu@{carlu}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{carlu}{carlu}}]{\setlength{\rightskip}{0pt plus 5cm}char Controleur\+De\+Serre\+::carlu\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_controleur_de_serre_a193c19856f0c0b34cd405eabce6ddfab}{}\label{class_controleur_de_serre_a193c19856f0c0b34cd405eabce6ddfab}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!commande@{commande}}
+\index{commande@{commande}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{commande}{commande}}]{\setlength{\rightskip}{0pt plus 5cm}char Controleur\+De\+Serre\+::commande\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_controleur_de_serre_adfb41079ae94c40c8eaeb784b485c018}{}\label{class_controleur_de_serre_adfb41079ae94c40c8eaeb784b485c018}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!incoming@{incoming}}
+\index{incoming@{incoming}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{incoming}{incoming}}]{\setlength{\rightskip}{0pt plus 5cm}String Controleur\+De\+Serre\+::incoming\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_controleur_de_serre_aff14cbd8c5c61d76d592922ad81264d8}{}\label{class_controleur_de_serre_aff14cbd8c5c61d76d592922ad81264d8}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!liaison\+Smartphone@{liaison\+Smartphone}}
+\index{liaison\+Smartphone@{liaison\+Smartphone}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{liaison\+Smartphone}{liaisonSmartphone}}]{\setlength{\rightskip}{0pt plus 5cm}Bluetooth\+Serial Controleur\+De\+Serre\+::liaison\+Smartphone\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_controleur_de_serre_a256aa95390c10b20876951613411372d}{}\label{class_controleur_de_serre_a256aa95390c10b20876951613411372d}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!num\+Zone@{num\+Zone}}
+\index{num\+Zone@{num\+Zone}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{num\+Zone}{numZone}}]{\setlength{\rightskip}{0pt plus 5cm}char Controleur\+De\+Serre\+::num\+Zone\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_controleur_de_serre_a743d1b27b4f77a807a199ef418a236d4}{}\label{class_controleur_de_serre_a743d1b27b4f77a807a199ef418a236d4}
+\index{Controleur\+De\+Serre@{Controleur\+De\+Serre}!zones@{zones}}
+\index{zones@{zones}!Controleur\+De\+Serre@{Controleur\+De\+Serre}}
+\subsubsection[{\texorpdfstring{zones}{zones}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Zone}$\ast$ Controleur\+De\+Serre\+::zones\mbox{[}4\mbox{]}}\hypertarget{class_controleur_de_serre_ad0cfc26f13ccea8cc304763caa32d3a5}{}\label{class_controleur_de_serre_ad0cfc26f13ccea8cc304763caa32d3a5}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{controleur_de_serre_8h}{controleur\+De\+Serre.\+h}\item 
+\hyperlink{controleur_de_serre_8cpp}{controleur\+De\+Serre.\+cpp}\end{DoxyCompactItemize}

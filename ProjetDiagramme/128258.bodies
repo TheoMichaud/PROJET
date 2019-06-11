@@ -1,0 +1,174 @@
+class Zone
+!!!136066.cpp!!!	Zone(in nbZone : int, in _commandeVanne : gpio_num_t, in _brocheHumidite : gpio_num_t, inout _cycles : CyclesArrossage)
+  seuilMin = cycles->ObtenirSeuilMin(numZone-1);
+  seuilMax = cycles->ObtenirSeuilMax(numZone-1);
+
+  duree = cycles->ObtenirDuree(numZone-1);
+  periode = cycles->ObtenirPeriode(numZone-1);
+  date = cycles->ObtenirDate(numZone-1);
+  heureDep = cycles->ObtenirHeure(numZone -1);
+
+
+  etatZone = ATTENTE; 
+  
+!!!136194.cpp!!!	~Zone()
+  
+!!!136322.cpp!!!	Controler(in _parametre : String, in now : DateTime) : int
+
+  char parametre = _parametre.charAt(0);
+
+switch (parametre)
+   {
+      case 'm':
+        etatMode = MODE_MANUEL;
+      
+        timerHumidite.Arreter();
+        Serial.print("Mode Manuel ");
+        Serial.print("zone ");
+        Serial.println(numZone);
+              
+        if(_parametre.charAt(1) == 'o')
+        {
+
+          laVanne.Controler('O');
+        }
+           
+        if(_parametre.charAt(1) == 'f') 
+        {
+
+          laVanne.Controler('F');
+        }
+           
+       
+        break;
+
+      case 'p':
+        etatMode = MODE_PROGRAMME;
+      
+        timerHumidite.Arreter();
+        Serial.print("Mode Programmé ");
+        Serial.print("zone ");
+        Serial.println(numZone);
+        timerTemps.Lancer(0,0,30);
+        etatZone = ATTENTE;
+        
+        
+        
+
+        
+        break;
+
+      case 'a':
+        etatMode = MODE_AUTOMATIQUE;
+      
+        Serial.print("Mode Automatique ");
+        Serial.print("zone ");
+        Serial.println(numZone);
+        timerHumidite.Lancer(0,0,10);
+
+        
+        
+        
+        
+          
+          
+        break;
+      default:
+
+         switch (etatMode)
+         {
+          case MODE_AUTOMATIQUE:
+              if(timerHumidite.Scruter())
+              {
+                  mesureHumidite = leCapteur.PreleverHumidite();
+                    if((mesureHumidite<= seuilMin) && (etatZone == ATTENTE))
+                    {
+                        laVanne.Controler('O');
+                        etatZone = ARROSAGE;
+                        
+                    }
+              if((mesureHumidite >= seuilMax) && (etatZone == ARROSAGE ))
+              {
+                  laVanne.Controler('F');
+                  etatZone = ATTENTE;
+              }
+              }
+           break;
+
+            case MODE_PROGRAMME:
+              if(etatZone == ATTENTE)
+              {
+                if(timerTemps.Scruter())
+                {
+                 /* Serial.print(" - date : ");
+                  Serial.print(date.jour);
+                  Serial.print("/");
+                  Serial.print(date.mois);
+                  Serial.print("/");
+                  Serial.print(date.annee);
+                  Serial.print(" - heure : ");
+                  Serial.print(heureDep.heure);
+                  Serial.print("::");
+                  Serial.print(heureDep.minutes);
+                  Serial.print("::");
+                  Serial.println(heureDep.secondes);
+                  
+                  Serial.print(" - date : ");
+                  Serial.print(now.day());
+                  Serial.print("/");
+                  Serial.print(now.month());
+                  Serial.print("/");
+                  Serial.print(now.year());
+                  Serial.print(" - heure : ");
+                  Serial.print(now.hour());
+                  Serial.print("::");
+                  Serial.print(now.minute());
+                  Serial.print("::");
+                  Serial.println(now.second());*/
+                  
+                }
+                
+                 if((date.annee == now.year()) && (date.mois == now.month()) && (date.jour == now.day()))
+                 {
+                  
+                    if((heureDep.heure == now.hour()) && (heureDep.minutes == now.minute()))
+                    {
+                      laVanne.Controler('O');
+                      etatZone = ARROSAGE;
+                      timerTemps.Lancer(0,0,duree);       // pour le test durée en seconde
+                    }
+                  }
+              }
+              if(etatZone == ARROSAGE)
+              {
+                if(timerTemps.Scruter())
+                {                  
+                laVanne.Controler('F');
+                etatZone = REPOS;
+                timerTemps.Arreter();
+                timerTemps.Lancer(0,0,periode);           // pour le test periode en seconde
+                }
+              }
+              
+              if(etatZone == REPOS)
+              {
+                if(timerTemps.Scruter())
+                {                  
+                laVanne.Controler('O');
+                etatZone = ARROSAGE;
+                timerTemps.Arreter();
+                timerTemps.Lancer(0,0,duree);             // pour le test durée en seconde
+                }
+              }              
+           break;
+           
+          default:    
+          break;
+         }
+      break;  
+   }
+
+   laVanne.Controler('X');
+  
+
+

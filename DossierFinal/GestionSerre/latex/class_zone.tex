@@ -1,0 +1,203 @@
+\hypertarget{class_zone}{}\section{Référence de la classe Zone}
+\label{class_zone}\index{Zone@{Zone}}
+
+
+{\ttfamily \#include $<$zone.\+h$>$}
+
+
+
+Graphe de collaboration de Zone\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_zone__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_zone_a07d053965fa6722cfc3f80d225677497}{M\+O\+D\+E\+\_\+\+Z\+O\+NE} \{ \hyperlink{class_zone_a07d053965fa6722cfc3f80d225677497a3c754e4a55948ba52fb8329c2874e54d}{M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+EL}, 
+\hyperlink{class_zone_a07d053965fa6722cfc3f80d225677497a95a13ba1fd5830ac255f4cc762e0261a}{M\+O\+D\+E\+\_\+\+P\+R\+O\+G\+R\+A\+M\+ME}, 
+\hyperlink{class_zone_a07d053965fa6722cfc3f80d225677497a337c2f25b250da75f6590ba4735a19df}{M\+O\+D\+E\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+Q\+UE}
+ \}
+\item 
+enum \hyperlink{class_zone_afed66edb8ab1446dcab5186028648880}{E\+T\+A\+T\+\_\+\+Z\+O\+NE} \{ \hyperlink{class_zone_afed66edb8ab1446dcab5186028648880ab0e5fa888d8db41efd00d61e527e80d3}{A\+T\+T\+E\+N\+TE}, 
+\hyperlink{class_zone_afed66edb8ab1446dcab5186028648880ac2006f5be5833d01d79c46e0878e581d}{O\+U\+V\+E\+R\+T\+U\+RE}, 
+\hyperlink{class_zone_afed66edb8ab1446dcab5186028648880ac566eede85c70a9ecd7555dfe1df9871}{F\+E\+R\+M\+E\+T\+U\+RE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_zone_ae3e1df767b1138077d5a0c4b60b6be10}{Zone} (int nb\+Zone, gpio\+\_\+num\+\_\+t \+\_\+commande\+Vanne, gpio\+\_\+num\+\_\+t \+\_\+broche\+Humidite)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_zone_ae3e1df767b1138077d5a0c4b60b6be10}{Zone\+::\+Zone}. \end{DoxyCompactList}\item 
+\hyperlink{class_zone_a562607cb5c4120a9316c5e967a5c610b}{$\sim$\+Zone} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_zone_a562607cb5c4120a9316c5e967a5c610b}{Zone\+::$\sim$\+Zone}. \end{DoxyCompactList}\item 
+int \hyperlink{class_zone_a27c5d83a0f4a2c965cbf0b8ae5c5bd9e}{Controler} (String \+\_\+parametre)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_zone_a27c5d83a0f4a2c965cbf0b8ae5c5bd9e}{Zone\+::\+Controler}. \end{DoxyCompactList}\item 
+int \hyperlink{class_zone_aeb1ceb3e614cbfcd53e9565f6afefb59}{Modifier\+Date\+Heure} ()
+\item 
+int \hyperlink{class_zone_a1f6fc952bc1ceb3acda81669ce875c04}{Modifier\+Seuil\+Humidite} ()
+\item 
+int \hyperlink{class_zone_ade9182f137c6db1c7c29a7b367991c3d}{Modifier\+Periodicite} ()
+\item 
+int \hyperlink{class_zone_a4390b52a1631ec05bc3a796db50bc5dd}{Modifier\+Duree} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_zone_a07d053965fa6722cfc3f80d225677497}{M\+O\+D\+E\+\_\+\+Z\+O\+NE} \hyperlink{class_zone_aa5e3a0305eda31639e37736109b7c957}{etat\+Mode}
+\item 
+\hyperlink{class_zone_afed66edb8ab1446dcab5186028648880}{E\+T\+A\+T\+\_\+\+Z\+O\+NE} \hyperlink{class_zone_a6130d56057619acb91ecce2a465b3b20}{etat\+Zone}
+\item 
+int \hyperlink{class_zone_a0efa38f2d12ae4d9ffcbffdee9b4f438}{num\+Zone}
+\item 
+String \hyperlink{class_zone_ac4e36c704602ec1d06d90a1f2c62b8be}{incoming}
+\item 
+\hyperlink{class_vanne}{Vanne} \hyperlink{class_zone_a375ebd280cc5bd60ba3e76a36224bc44}{la\+Vanne}
+\item 
+\hyperlink{class_humidite}{Humidite} \hyperlink{class_zone_a1f070429b7b55eb43aed46664f64f469}{le\+Capteur}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des énumérations membres}
+\index{Zone@{Zone}!E\+T\+A\+T\+\_\+\+Z\+O\+NE@{E\+T\+A\+T\+\_\+\+Z\+O\+NE}}
+\index{E\+T\+A\+T\+\_\+\+Z\+O\+NE@{E\+T\+A\+T\+\_\+\+Z\+O\+NE}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{E\+T\+A\+T\+\_\+\+Z\+O\+NE}{ETAT_ZONE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Zone\+::\+E\+T\+A\+T\+\_\+\+Z\+O\+NE}}\hypertarget{class_zone_afed66edb8ab1446dcab5186028648880}{}\label{class_zone_afed66edb8ab1446dcab5186028648880}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{A\+T\+T\+E\+N\+TE@{A\+T\+T\+E\+N\+TE}!Zone@{Zone}}\index{Zone@{Zone}!A\+T\+T\+E\+N\+TE@{A\+T\+T\+E\+N\+TE}}\item[{\em 
+A\+T\+T\+E\+N\+TE\hypertarget{class_zone_afed66edb8ab1446dcab5186028648880ab0e5fa888d8db41efd00d61e527e80d3}{}\label{class_zone_afed66edb8ab1446dcab5186028648880ab0e5fa888d8db41efd00d61e527e80d3}
+}]\index{O\+U\+V\+E\+R\+T\+U\+RE@{O\+U\+V\+E\+R\+T\+U\+RE}!Zone@{Zone}}\index{Zone@{Zone}!O\+U\+V\+E\+R\+T\+U\+RE@{O\+U\+V\+E\+R\+T\+U\+RE}}\item[{\em 
+O\+U\+V\+E\+R\+T\+U\+RE\hypertarget{class_zone_afed66edb8ab1446dcab5186028648880ac2006f5be5833d01d79c46e0878e581d}{}\label{class_zone_afed66edb8ab1446dcab5186028648880ac2006f5be5833d01d79c46e0878e581d}
+}]\index{F\+E\+R\+M\+E\+T\+U\+RE@{F\+E\+R\+M\+E\+T\+U\+RE}!Zone@{Zone}}\index{Zone@{Zone}!F\+E\+R\+M\+E\+T\+U\+RE@{F\+E\+R\+M\+E\+T\+U\+RE}}\item[{\em 
+F\+E\+R\+M\+E\+T\+U\+RE\hypertarget{class_zone_afed66edb8ab1446dcab5186028648880ac566eede85c70a9ecd7555dfe1df9871}{}\label{class_zone_afed66edb8ab1446dcab5186028648880ac566eede85c70a9ecd7555dfe1df9871}
+}]\end{description}
+\end{Desc}
+\index{Zone@{Zone}!M\+O\+D\+E\+\_\+\+Z\+O\+NE@{M\+O\+D\+E\+\_\+\+Z\+O\+NE}}
+\index{M\+O\+D\+E\+\_\+\+Z\+O\+NE@{M\+O\+D\+E\+\_\+\+Z\+O\+NE}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+E\+\_\+\+Z\+O\+NE}{MODE_ZONE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Zone\+::\+M\+O\+D\+E\+\_\+\+Z\+O\+NE}}\hypertarget{class_zone_a07d053965fa6722cfc3f80d225677497}{}\label{class_zone_a07d053965fa6722cfc3f80d225677497}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+EL@{M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+EL}!Zone@{Zone}}\index{Zone@{Zone}!M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+EL@{M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+EL}}\item[{\em 
+M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+EL\hypertarget{class_zone_a07d053965fa6722cfc3f80d225677497a3c754e4a55948ba52fb8329c2874e54d}{}\label{class_zone_a07d053965fa6722cfc3f80d225677497a3c754e4a55948ba52fb8329c2874e54d}
+}]\index{M\+O\+D\+E\+\_\+\+P\+R\+O\+G\+R\+A\+M\+ME@{M\+O\+D\+E\+\_\+\+P\+R\+O\+G\+R\+A\+M\+ME}!Zone@{Zone}}\index{Zone@{Zone}!M\+O\+D\+E\+\_\+\+P\+R\+O\+G\+R\+A\+M\+ME@{M\+O\+D\+E\+\_\+\+P\+R\+O\+G\+R\+A\+M\+ME}}\item[{\em 
+M\+O\+D\+E\+\_\+\+P\+R\+O\+G\+R\+A\+M\+ME\hypertarget{class_zone_a07d053965fa6722cfc3f80d225677497a95a13ba1fd5830ac255f4cc762e0261a}{}\label{class_zone_a07d053965fa6722cfc3f80d225677497a95a13ba1fd5830ac255f4cc762e0261a}
+}]\index{M\+O\+D\+E\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+Q\+UE@{M\+O\+D\+E\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+Q\+UE}!Zone@{Zone}}\index{Zone@{Zone}!M\+O\+D\+E\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+Q\+UE@{M\+O\+D\+E\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+Q\+UE}}\item[{\em 
+M\+O\+D\+E\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+Q\+UE\hypertarget{class_zone_a07d053965fa6722cfc3f80d225677497a337c2f25b250da75f6590ba4735a19df}{}\label{class_zone_a07d053965fa6722cfc3f80d225677497a337c2f25b250da75f6590ba4735a19df}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{Zone@{Zone}!Zone@{Zone}}
+\index{Zone@{Zone}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{Zone(int nb\+Zone, gpio\+\_\+num\+\_\+t \+\_\+commande\+Vanne, gpio\+\_\+num\+\_\+t \+\_\+broche\+Humidite)}{Zone(int nbZone, gpio_num_t _commandeVanne, gpio_num_t _brocheHumidite)}}]{\setlength{\rightskip}{0pt plus 5cm}Zone\+::\+Zone (
+\begin{DoxyParamCaption}
+\item[{int}]{nb\+Zone, }
+\item[{gpio\+\_\+num\+\_\+t}]{\+\_\+commande\+Vanne, }
+\item[{gpio\+\_\+num\+\_\+t}]{\+\_\+broche\+Humidite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_zone_ae3e1df767b1138077d5a0c4b60b6be10}{}\label{class_zone_ae3e1df767b1138077d5a0c4b60b6be10}
+
+
+\hyperlink{class_zone_ae3e1df767b1138077d5a0c4b60b6be10}{Zone\+::\+Zone}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & nb\+Zone permet de connaitre le nom de la zone \\
+\hline
+{\em gpio\+\_\+num\+\_\+t} & \+\_\+commande\+Vanne c\textquotesingle{}est la broche de la vanne à gérer \\
+\hline
+{\em gpio\+\_\+num\+\_\+t} & \+\_\+broche\+Humidite, c\textquotesingle{}est la broche du capteur d\textquotesingle{}humidité\\
+\hline
+\end{DoxyParams}
+Constructeur de la classe. \index{Zone@{Zone}!````~Zone@{$\sim$\+Zone}}
+\index{````~Zone@{$\sim$\+Zone}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{$\sim$\+Zone()}{~Zone()}}]{\setlength{\rightskip}{0pt plus 5cm}Zone\+::$\sim$\+Zone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_zone_a562607cb5c4120a9316c5e967a5c610b}{}\label{class_zone_a562607cb5c4120a9316c5e967a5c610b}
+
+
+\hyperlink{class_zone_a562607cb5c4120a9316c5e967a5c610b}{Zone\+::$\sim$\+Zone}. 
+
+Déstructeur de la classe. 
+
+\subsection{Documentation des fonctions membres}
+\index{Zone@{Zone}!Controler@{Controler}}
+\index{Controler@{Controler}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{Controler(\+String \+\_\+parametre)}{Controler(String _parametre)}}]{\setlength{\rightskip}{0pt plus 5cm}int Zone\+::\+Controler (
+\begin{DoxyParamCaption}
+\item[{String}]{\+\_\+parametre}
+\end{DoxyParamCaption}
+)}\hypertarget{class_zone_a27c5d83a0f4a2c965cbf0b8ae5c5bd9e}{}\label{class_zone_a27c5d83a0f4a2c965cbf0b8ae5c5bd9e}
+
+
+\hyperlink{class_zone_a27c5d83a0f4a2c965cbf0b8ae5c5bd9e}{Zone\+::\+Controler}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & \+\_\+parametre, c\textquotesingle{}est la chaine que renvoie l\textquotesingle{}application lorsqu\textquotesingle{}une action est effectuée\\
+\hline
+\end{DoxyParams}
+Si la chaine de caractère reçue commence par un m, alors on passe en mode manuel et l\textquotesingle{}ouverture ou la fermeture dependera du caractère suivant.
+
+Si elle commence par un p on passe en mode programmé et si elle commence par un a alors on passe en mode auto. \index{Zone@{Zone}!Modifier\+Date\+Heure@{Modifier\+Date\+Heure}}
+\index{Modifier\+Date\+Heure@{Modifier\+Date\+Heure}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{Modifier\+Date\+Heure()}{ModifierDateHeure()}}]{\setlength{\rightskip}{0pt plus 5cm}int Zone\+::\+Modifier\+Date\+Heure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_zone_aeb1ceb3e614cbfcd53e9565f6afefb59}{}\label{class_zone_aeb1ceb3e614cbfcd53e9565f6afefb59}
+\index{Zone@{Zone}!Modifier\+Duree@{Modifier\+Duree}}
+\index{Modifier\+Duree@{Modifier\+Duree}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{Modifier\+Duree()}{ModifierDuree()}}]{\setlength{\rightskip}{0pt plus 5cm}int Zone\+::\+Modifier\+Duree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_zone_a4390b52a1631ec05bc3a796db50bc5dd}{}\label{class_zone_a4390b52a1631ec05bc3a796db50bc5dd}
+\index{Zone@{Zone}!Modifier\+Periodicite@{Modifier\+Periodicite}}
+\index{Modifier\+Periodicite@{Modifier\+Periodicite}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{Modifier\+Periodicite()}{ModifierPeriodicite()}}]{\setlength{\rightskip}{0pt plus 5cm}int Zone\+::\+Modifier\+Periodicite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_zone_ade9182f137c6db1c7c29a7b367991c3d}{}\label{class_zone_ade9182f137c6db1c7c29a7b367991c3d}
+\index{Zone@{Zone}!Modifier\+Seuil\+Humidite@{Modifier\+Seuil\+Humidite}}
+\index{Modifier\+Seuil\+Humidite@{Modifier\+Seuil\+Humidite}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{Modifier\+Seuil\+Humidite()}{ModifierSeuilHumidite()}}]{\setlength{\rightskip}{0pt plus 5cm}int Zone\+::\+Modifier\+Seuil\+Humidite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_zone_a1f6fc952bc1ceb3acda81669ce875c04}{}\label{class_zone_a1f6fc952bc1ceb3acda81669ce875c04}
+
+
+\subsection{Documentation des données membres}
+\index{Zone@{Zone}!etat\+Mode@{etat\+Mode}}
+\index{etat\+Mode@{etat\+Mode}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{etat\+Mode}{etatMode}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+O\+D\+E\+\_\+\+Z\+O\+NE} Zone\+::etat\+Mode\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_zone_aa5e3a0305eda31639e37736109b7c957}{}\label{class_zone_aa5e3a0305eda31639e37736109b7c957}
+\index{Zone@{Zone}!etat\+Zone@{etat\+Zone}}
+\index{etat\+Zone@{etat\+Zone}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{etat\+Zone}{etatZone}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+T\+A\+T\+\_\+\+Z\+O\+NE} Zone\+::etat\+Zone\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_zone_a6130d56057619acb91ecce2a465b3b20}{}\label{class_zone_a6130d56057619acb91ecce2a465b3b20}
+\index{Zone@{Zone}!incoming@{incoming}}
+\index{incoming@{incoming}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{incoming}{incoming}}]{\setlength{\rightskip}{0pt plus 5cm}String Zone\+::incoming\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_zone_ac4e36c704602ec1d06d90a1f2c62b8be}{}\label{class_zone_ac4e36c704602ec1d06d90a1f2c62b8be}
+\index{Zone@{Zone}!la\+Vanne@{la\+Vanne}}
+\index{la\+Vanne@{la\+Vanne}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{la\+Vanne}{laVanne}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vanne} Zone\+::la\+Vanne\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_zone_a375ebd280cc5bd60ba3e76a36224bc44}{}\label{class_zone_a375ebd280cc5bd60ba3e76a36224bc44}
+\index{Zone@{Zone}!le\+Capteur@{le\+Capteur}}
+\index{le\+Capteur@{le\+Capteur}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{le\+Capteur}{leCapteur}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Humidite} Zone\+::le\+Capteur\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_zone_a1f070429b7b55eb43aed46664f64f469}{}\label{class_zone_a1f070429b7b55eb43aed46664f64f469}
+\index{Zone@{Zone}!num\+Zone@{num\+Zone}}
+\index{num\+Zone@{num\+Zone}!Zone@{Zone}}
+\subsubsection[{\texorpdfstring{num\+Zone}{numZone}}]{\setlength{\rightskip}{0pt plus 5cm}int Zone\+::num\+Zone\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_zone_a0efa38f2d12ae4d9ffcbffdee9b4f438}{}\label{class_zone_a0efa38f2d12ae4d9ffcbffdee9b4f438}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{zone_8h}{zone.\+h}\item 
+\hyperlink{zone_8cpp}{zone.\+cpp}\end{DoxyCompactItemize}

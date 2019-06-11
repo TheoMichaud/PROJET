@@ -1,0 +1,5 @@
+<map id="Zone" name="Zone">
+<area shape="rect" id="node2" href="$class_humidite.html" title="{Humidite\n|&#45; YL69Pin\l&#45; pourcentage\l|+ Humidite()\l+ ~Humidite()\l+ PreleverHumidite()\l}" alt="" coords="5,263,148,384"/>
+<area shape="rect" id="node3" href="$class_vanne.html" title="{Vanne\n|&#45; brocheImpulsion\l&#45; sensA\l&#45; sensB\l&#45; etat\l|+ Vanne()\l+ ~Vanne()\l+ Ouvrir()\l+ Fermer()\l+ Controler()\l}" alt="" coords="173,233,298,413"/>
+<area shape="rect" id="node4" href="$class_timer.html" title="{Timer\n|&#45; millisecondes\l&#45; valeurPrecedente\l&#45; unCoup\l&#45; actif\l|+ Timer()\l+ Lancer()\l+ Lancer()\l+ Scruter()\l}" alt="" coords="170,5,301,171"/>
+</map>

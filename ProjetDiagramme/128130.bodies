@@ -1,0 +1,136 @@
+class ControleurDeSerre
+!!!128642.cpp!!!	ControleurDeSerre()
+  cycles = new CyclesArrossage(GPIO_NUM_5);
+  cycles->LireCarteSD();
+  cycles->LireCarteSDModeProg();
+  //cyclesProg = new CyclesArrossage(GPIO_NUM_5);
+  //cyclesProg->LireCarteSDModeProg();
+   
+  
+  zones[0]=new Zone(1,GPIO_NUM_4,GPIO_NUM_34,cycles);
+  zones[1]=new Zone(2,GPIO_NUM_27,GPIO_NUM_34,cycles);
+  zones[2]=new Zone(3,GPIO_NUM_4,GPIO_NUM_34,cycles);
+  zones[3]=new Zone(4,GPIO_NUM_4,GPIO_NUM_34,cycles);
+
+  liaisonSmartphone.begin("Serre Connectée 3");             //Nom du signal Bluetooth
+  liaisonSmartphone.println("Connexion Réussie");
+
+  rtc.begin();
+
+  capteur = new Capteur();
+  s1 = new StockageDonnees();
+ 
+!!!128770.cpp!!!	~ControleurDeSerre()
+  
+  for(int i=0; i<4; i++)
+  {
+    delete *zones;    
+  }
+
+  
+!!!128898.cpp!!!	Piloter() : void
+  
+  DateTime valCourant;
+  valCourant = rtc.now();
+  while (liaisonSmartphone.available() )                                                  //Check if we receive anything from Bluetooth
+  {
+   carlu = liaisonSmartphone.read();
+   incoming += carlu;
+     
+  }
+
+  if(incoming.compareTo("") != 0)
+  {
+    commande = incoming.charAt(0);
+   switch (commande)
+   {
+      case 'z':
+        numZone = incoming.charAt(1) ;
+        zones[(int)(numZone - '1')]->Controler(incoming.substring(2),valCourant);
+        break;
+      default:
+        
+      break;  
+   }
+     
+  incoming = "";
+  }
+
+  for(int indice=0; indice<4; indice++){
+      
+      zones[indice]->Controler(" ",valCourant);
+   }
+  
+!!!129026.cpp!!!	PiloterCapteurs() : void
+
+  MySQL_Connection conn(&s1->client);
+
+  //Toutes les 15 minutes,l'ESP32 va effectuer les opérations suivantes
+  if (attente.Scruter())
+  {
+    //Permet de récupérer les données météorologiques
+    capteur->ReleverTemperature();
+
+    capteur->ReleverHygrometrie();
+
+    capteur->ReleverLuminosite();
+    
+    String chaine;
+    s1->VerifierConnexionWifi();
+    conn = s1->VerifierConnexionServeur(conn);
+
+    if (conn.connected()) {
+    s1->fermeture = true;
+      chaine = s1->RecupererSeuilsVannes(conn);
+      s1->EnregistrerDonneesSeuilsFichierLocal(chaine);
+      conn.close();
+
+      conn = s1->ConnexionServeur();
+      chaine = s1->RecupererModeProgramme(conn);
+      s1->EnregistrerDonneesRecupererModeProgrammeFichierLocal(chaine);
+      conn.close();
+
+      if (s1->fermeture == true) {
+        s1->fichier.close();
+      }
+
+      do {
+        chaine = s1->LireDonneesFichierLocal();
+        if(chaine!=""){
+        s1->InsererDonneesMesuresLocalesInterieurSerre(chaine);
+
+        conn = s1->ConnexionServeur();
+        s1->EnvoyerDonneesLocalesBdd(conn);
+        conn.close();
+        }
+
+      } while (chaine != "");
+
+      if (chaine == "") {
+        s1->OuvrirFichierDonneesMeteorologiquesEcriture();
+        s1->fichier.close();
+      }
+
+      s1->InsererDonneesMesuresInterieurSerre(capteur->temperature, capteur->hygrometrie, capteur->luminosite);
+     
+      conn = s1->ConnexionServeur();
+      s1->EnvoyerDonneesBdd(conn);
+      conn.close();
+    } else {
+      s1->EnregistrerDonneesFichierLocal(capteur->temperature, capteur->hygrometrie, capteur->luminosite);
+      conn.close();
+
+    }
+
+  }
+
+!!!129154.cpp!!!	Initialisation() : void
+  MySQL_Connection conn(&s1->client);
+  //Création du timer fixé à 15 minutes
+  attente.Lancer(0, 0, 20);
+
+  s1->DefinirParametresCarte();
+
+  s1->ConnexionWifi();
+  conn = s1->ConnexionServeur();
+

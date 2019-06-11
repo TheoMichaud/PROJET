@@ -1,0 +1,170 @@
+\hypertarget{class_vanne}{}\section{Référence de la classe Vanne}
+\label{class_vanne}\index{Vanne@{Vanne}}
+
+
+{\ttfamily \#include $<$vanne.\+h$>$}
+
+
+
+Graphe de collaboration de Vanne\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_vanne__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3f}{E\+T\+A\+T\+\_\+\+V\+A\+N\+NE} \{ \\*
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3fae109e58f9fd0e71c014508f1d0c0c822}{R\+E\+P\+OS}, 
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3fa21e006590946195e7563b566ddbb7729}{O\+U\+V\+E\+RT}, 
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3fa300ae1e445c61cb33a96a6e5724a2390}{F\+E\+R\+M\+ER}, 
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3fadcc6f97225703ab20b0d0b9bd8a2cc63}{E\+N\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE}, 
+\\*
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3fa366b255b6287261305630772bf87809f}{E\+N\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE}, 
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3fa8e1beadd18316dfa66296a0f5be1bf8f}{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE}, 
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3fa07fbc78323cdb789ea97d714778e2b19}{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vanne_aa809c804e63bec235b0733091217bdd5}{Vanne} (gpio\+\_\+num\+\_\+t \+\_\+broche\+Impulsion)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vanne_aa809c804e63bec235b0733091217bdd5}{Vanne\+::\+Vanne}  \+\_\+broche\+Impulsion, c\textquotesingle{}est le numéro de la broche sur laquelle on enverra l\textquotesingle{}impulsion. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_vanne_a682923104515512c227d3a91c5f156ed}{$\sim$\+Vanne} ()
+\item 
+void \hyperlink{class_vanne_abaf4f1253b0fb8016b86280017a5fd53}{Ouvrir} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vanne_abaf4f1253b0fb8016b86280017a5fd53}{Vanne\+::\+Ouvrir}. \end{DoxyCompactList}\item 
+void \hyperlink{class_vanne_a009f9021ff1f44fa633eee3e8f42bd9f}{Fermer} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vanne_a009f9021ff1f44fa633eee3e8f42bd9f}{Vanne\+::\+Fermer}. \end{DoxyCompactList}\item 
+int \hyperlink{class_vanne_a81820af5e718ed19bb3d7359484c8b88}{Controler} (char commande)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vanne_a81820af5e718ed19bb3d7359484c8b88}{Vanne\+::\+Controler}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+gpio\+\_\+num\+\_\+t \hyperlink{class_vanne_a972da53e393d5b1911b2c1bff2fc0cc7}{broche\+Impulsion}
+\item 
+\hyperlink{class_timer}{Timer} \hyperlink{class_vanne_a3cc616e595d81a083fe79dc1a5a74fa2}{timer\+Impulsion}
+\item 
+const gpio\+\_\+num\+\_\+t \hyperlink{class_vanne_ae5e8b2f4a69751a996ff535ff56c44bf}{sensA}
+\item 
+const gpio\+\_\+num\+\_\+t \hyperlink{class_vanne_ad50ee3497ec27d35b52b17531f0019b3}{sensB}
+\item 
+\hyperlink{class_vanne_a81379125f1e1526fbb5f07e234736a3f}{E\+T\+A\+T\+\_\+\+V\+A\+N\+NE} \hyperlink{class_vanne_aeb49318747b8a7cb8eeb3f9b9e6a3c71}{etat}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des énumérations membres}
+\index{Vanne@{Vanne}!E\+T\+A\+T\+\_\+\+V\+A\+N\+NE@{E\+T\+A\+T\+\_\+\+V\+A\+N\+NE}}
+\index{E\+T\+A\+T\+\_\+\+V\+A\+N\+NE@{E\+T\+A\+T\+\_\+\+V\+A\+N\+NE}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{E\+T\+A\+T\+\_\+\+V\+A\+N\+NE}{ETAT_VANNE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vanne\+::\+E\+T\+A\+T\+\_\+\+V\+A\+N\+NE}}\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3f}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3f}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{R\+E\+P\+OS@{R\+E\+P\+OS}!Vanne@{Vanne}}\index{Vanne@{Vanne}!R\+E\+P\+OS@{R\+E\+P\+OS}}\item[{\em 
+R\+E\+P\+OS\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3fae109e58f9fd0e71c014508f1d0c0c822}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3fae109e58f9fd0e71c014508f1d0c0c822}
+}]\index{O\+U\+V\+E\+RT@{O\+U\+V\+E\+RT}!Vanne@{Vanne}}\index{Vanne@{Vanne}!O\+U\+V\+E\+RT@{O\+U\+V\+E\+RT}}\item[{\em 
+O\+U\+V\+E\+RT\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3fa21e006590946195e7563b566ddbb7729}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3fa21e006590946195e7563b566ddbb7729}
+}]\index{F\+E\+R\+M\+ER@{F\+E\+R\+M\+ER}!Vanne@{Vanne}}\index{Vanne@{Vanne}!F\+E\+R\+M\+ER@{F\+E\+R\+M\+ER}}\item[{\em 
+F\+E\+R\+M\+ER\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3fa300ae1e445c61cb33a96a6e5724a2390}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3fa300ae1e445c61cb33a96a6e5724a2390}
+}]\index{E\+N\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE@{E\+N\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE}!Vanne@{Vanne}}\index{Vanne@{Vanne}!E\+N\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE@{E\+N\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE}}\item[{\em 
+E\+N\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3fadcc6f97225703ab20b0d0b9bd8a2cc63}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3fadcc6f97225703ab20b0d0b9bd8a2cc63}
+}]\index{E\+N\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE@{E\+N\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE}!Vanne@{Vanne}}\index{Vanne@{Vanne}!E\+N\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE@{E\+N\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE}}\item[{\em 
+E\+N\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3fa366b255b6287261305630772bf87809f}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3fa366b255b6287261305630772bf87809f}
+}]\index{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE@{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE}!Vanne@{Vanne}}\index{Vanne@{Vanne}!E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE@{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE}}\item[{\em 
+E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+O\+U\+V\+E\+R\+T\+U\+RE\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3fa8e1beadd18316dfa66296a0f5be1bf8f}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3fa8e1beadd18316dfa66296a0f5be1bf8f}
+}]\index{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE@{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE}!Vanne@{Vanne}}\index{Vanne@{Vanne}!E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE@{E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE}}\item[{\em 
+E\+N\+\_\+\+A\+T\+T\+E\+N\+T\+E\+\_\+\+F\+E\+R\+M\+E\+T\+U\+RE\hypertarget{class_vanne_a81379125f1e1526fbb5f07e234736a3fa07fbc78323cdb789ea97d714778e2b19}{}\label{class_vanne_a81379125f1e1526fbb5f07e234736a3fa07fbc78323cdb789ea97d714778e2b19}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{Vanne@{Vanne}!Vanne@{Vanne}}
+\index{Vanne@{Vanne}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{Vanne(gpio\+\_\+num\+\_\+t \+\_\+broche\+Impulsion)}{Vanne(gpio_num_t _brocheImpulsion)}}]{\setlength{\rightskip}{0pt plus 5cm}Vanne\+::\+Vanne (
+\begin{DoxyParamCaption}
+\item[{gpio\+\_\+num\+\_\+t}]{\+\_\+broche\+Impulsion}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vanne_aa809c804e63bec235b0733091217bdd5}{}\label{class_vanne_aa809c804e63bec235b0733091217bdd5}
+
+
+\hyperlink{class_vanne_aa809c804e63bec235b0733091217bdd5}{Vanne\+::\+Vanne}  \+\_\+broche\+Impulsion, c\textquotesingle{}est le numéro de la broche sur laquelle on enverra l\textquotesingle{}impulsion. 
+
+Constructeur de la classe. \index{Vanne@{Vanne}!````~Vanne@{$\sim$\+Vanne}}
+\index{````~Vanne@{$\sim$\+Vanne}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{$\sim$\+Vanne()}{~Vanne()}}]{\setlength{\rightskip}{0pt plus 5cm}Vanne\+::$\sim$\+Vanne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_vanne_a682923104515512c227d3a91c5f156ed}{}\label{class_vanne_a682923104515512c227d3a91c5f156ed}
+
+
+\subsection{Documentation des fonctions membres}
+\index{Vanne@{Vanne}!Controler@{Controler}}
+\index{Controler@{Controler}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{Controler(char commande)}{Controler(char commande)}}]{\setlength{\rightskip}{0pt plus 5cm}int Vanne\+::\+Controler (
+\begin{DoxyParamCaption}
+\item[{char}]{commande}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vanne_a81820af5e718ed19bb3d7359484c8b88}{}\label{class_vanne_a81820af5e718ed19bb3d7359484c8b88}
+
+
+\hyperlink{class_vanne_a81820af5e718ed19bb3d7359484c8b88}{Vanne\+::\+Controler}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em char} & commande\\
+\hline
+\end{DoxyParams}
+On va regarder l\textquotesingle{}état de la vanne et effectuer une action en fonction de son état. \index{Vanne@{Vanne}!Fermer@{Fermer}}
+\index{Fermer@{Fermer}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{Fermer()}{Fermer()}}]{\setlength{\rightskip}{0pt plus 5cm}void Vanne\+::\+Fermer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vanne_a009f9021ff1f44fa633eee3e8f42bd9f}{}\label{class_vanne_a009f9021ff1f44fa633eee3e8f42bd9f}
+
+
+\hyperlink{class_vanne_a009f9021ff1f44fa633eee3e8f42bd9f}{Vanne\+::\+Fermer}. 
+
+Si il n\textquotesingle{}y a pas de mutex alors on configure les broches en fermeture et on lance le Timer\+Impulsion pendant 250ms
+
+Sinon, on attend la fermeture \index{Vanne@{Vanne}!Ouvrir@{Ouvrir}}
+\index{Ouvrir@{Ouvrir}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{Ouvrir()}{Ouvrir()}}]{\setlength{\rightskip}{0pt plus 5cm}void Vanne\+::\+Ouvrir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vanne_abaf4f1253b0fb8016b86280017a5fd53}{}\label{class_vanne_abaf4f1253b0fb8016b86280017a5fd53}
+
+
+\hyperlink{class_vanne_abaf4f1253b0fb8016b86280017a5fd53}{Vanne\+::\+Ouvrir}. 
+
+Si il n\textquotesingle{}y a pas de mutex alors on configure les broches en ouverture et on lance le Timer\+Impulsion pendant 250ms
+
+Sinon, on attend l\textquotesingle{}ouverture 
+
+\subsection{Documentation des données membres}
+\index{Vanne@{Vanne}!broche\+Impulsion@{broche\+Impulsion}}
+\index{broche\+Impulsion@{broche\+Impulsion}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{broche\+Impulsion}{brocheImpulsion}}]{\setlength{\rightskip}{0pt plus 5cm}gpio\+\_\+num\+\_\+t Vanne\+::broche\+Impulsion\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vanne_a972da53e393d5b1911b2c1bff2fc0cc7}{}\label{class_vanne_a972da53e393d5b1911b2c1bff2fc0cc7}
+\index{Vanne@{Vanne}!etat@{etat}}
+\index{etat@{etat}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{etat}{etat}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+T\+A\+T\+\_\+\+V\+A\+N\+NE} Vanne\+::etat\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vanne_aeb49318747b8a7cb8eeb3f9b9e6a3c71}{}\label{class_vanne_aeb49318747b8a7cb8eeb3f9b9e6a3c71}
+\index{Vanne@{Vanne}!sensA@{sensA}}
+\index{sensA@{sensA}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{sensA}{sensA}}]{\setlength{\rightskip}{0pt plus 5cm}const gpio\+\_\+num\+\_\+t Vanne\+::sensA\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vanne_ae5e8b2f4a69751a996ff535ff56c44bf}{}\label{class_vanne_ae5e8b2f4a69751a996ff535ff56c44bf}
+\index{Vanne@{Vanne}!sensB@{sensB}}
+\index{sensB@{sensB}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{sensB}{sensB}}]{\setlength{\rightskip}{0pt plus 5cm}const gpio\+\_\+num\+\_\+t Vanne\+::sensB\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vanne_ad50ee3497ec27d35b52b17531f0019b3}{}\label{class_vanne_ad50ee3497ec27d35b52b17531f0019b3}
+\index{Vanne@{Vanne}!timer\+Impulsion@{timer\+Impulsion}}
+\index{timer\+Impulsion@{timer\+Impulsion}!Vanne@{Vanne}}
+\subsubsection[{\texorpdfstring{timer\+Impulsion}{timerImpulsion}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} Vanne\+::timer\+Impulsion\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vanne_a3cc616e595d81a083fe79dc1a5a74fa2}{}\label{class_vanne_a3cc616e595d81a083fe79dc1a5a74fa2}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vanne_8h}{vanne.\+h}\item 
+\hyperlink{vanne_8cpp}{vanne.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+window_sizes 1600 850 375 1219 713 85
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128002 // Classes
+    899 861 60 A0 132 129
+end
+show_stereotypes
+selected class_ref 129410 // Vanne
+open
+  classview_ref 128002 // Complet
+  classview_ref 128130 // GestionSerre
+  deploymentview_ref 128130 // GestionSerre
+end
+end

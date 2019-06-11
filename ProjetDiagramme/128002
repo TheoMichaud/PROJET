@@ -1,0 +1,2847 @@
+format 221
+"GestionSerre" // GestionSerre
+  revision 1
+  modified_by 2 "tmichaud"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "/home/USERS/ELEVES/SNIR2017/tmichaud/Arduino/IntegrationProjet/GestionSerre/"
+  cpp_src_dir "/home/USERS/ELEVES/SNIR2017/tmichaud/Arduino/IntegrationProjet/GestionSerre/"
+  classview 128130 "GestionSerre"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 128002 "Capteur"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128002 "Capteur"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${class}::${name}${(}${)}${volatile}${throw} {
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 128130 "~Capteur"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${virtual}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${class}::${name}${(}${)}${volatile}${throw} {
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 128258 "ReleverTemperature"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Capteur::ReleverTemperatureInterieur
+//@details Permet de relever la temperature du capteur bme280
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 128386 "ReleverHygrometrie"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Capteur::ReleverHygrometrieInterieur
+//@details Permet de relever la hygrométrie du capteur bme280
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 128514 "ReleverLuminosite"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Capteur::ReleverLuminositeInterieur
+//@details Permet de relever la luminosité du capteur tsl2591
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 128002 "temperature"
+	public explicit_type "float"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128130 "hygrometrie"
+	public explicit_type "float"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128258 "luminosite"
+	public explicit_type "uint16_t"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128386 "bme"
+	private explicit_type "Adafruit_BME280"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128514 "tsl"
+	private explicit_type "Adafruit_TSL2591"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128642 "YL69Pin"
+	const_attribute private explicit_type "int"
+	init_value "=  34"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Pin du capteur d'huimité du sol
+"
+      end
+
+      attribute 128770 "pourcentageHumidite"
+	private explicit_type "int"
+	init_value "=  0"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128130 "ControleurDeSerre"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128642 "ControleurDeSerre"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@ControleurDeSerre::ControleurDeSerre
+//@details Constructeur de la classe, on va initialiser dans un tableau nos différentes zones ici 4 et on va démarrer la liaison bluetooth.
+//
+
+${inline}${class}::${name}${(}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 128770 "~ControleurDeSerre"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${virtual}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@ControleurDeSerre::~ControleurDeSerre
+//@details Déstructeur de la classe, on va venir supprimer, effacer les zones crées dans le constructeur.
+//
+
+${inline}${class}::${name}${(}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 128002 // zones (<unidirectional association>)
+	relation 128002 --->
+	  a role_name "zones" multiplicity "[4]" public
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${multiplicity}${value};
+"
+	    classrelation_ref 128002 // zones (<unidirectional association>)
+	  b parent class_ref 128258 // Zone
+      end
+
+      operation 128898 "Piloter"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@ControleurDeSerre::ControleurDeSerre
+//@details Première Partie : Tant que la liaison bluetooth fonctionne on récupére la chaine de caractère envoyée
+//@details Deuxième Partie : On compare la chaine de caractère, si le premier caractère est un z on regarde le deuxième pour obtenir le numéro de la zone. puis on appelle la méthode Controler ().
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 129026 "PiloterCapteurs"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 129154 "Initialisation"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief ControleurDeSerre::Initialisation
+//@details Permet d'Initialiser la carte ESP32
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 128130 // capteur (<unidirectional association>)
+	relation 128130 --->
+	  a role_name "capteur" public
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128130 // capteur (<unidirectional association>)
+	  b parent class_ref 128002 // Capteur
+      end
+
+      classrelation 128258 // s1 (<unidirectional association>)
+	relation 128258 --->
+	  a role_name "s1" public
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128258 // s1 (<unidirectional association>)
+	  b parent class_ref 128386 // StockageDonnees
+      end
+
+      attribute 128898 "incoming"
+	private explicit_type "String"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129026 "liaisonSmartphone"
+	private explicit_type "BluetoothSerial"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129154 "commande"
+	private explicit_type "char"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129282 "carlu"
+	private explicit_type "char"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129410 "numZone"
+	private explicit_type "char"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128386 // cycles (<unidirectional association>)
+	relation 128386 --->
+	  a role_name "cycles" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128386 // cycles (<unidirectional association>)
+	  b parent class_ref 128514 // CyclesArrossage
+      end
+
+      classrelation 128514 // cyclesProg (<unidirectional association>)
+	relation 128514 --->
+	  a role_name "cyclesProg" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128514 // cyclesProg (<unidirectional association>)
+	  b parent class_ref 128514 // CyclesArrossage
+      end
+
+      attribute 129538 "rtc"
+	private explicit_type "RTC_DS3231"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128642 // attente (<directional composition>)
+	relation 128642 *-->
+	  a role_name "attente" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 128642 // attente (<directional composition>)
+	  b parent class_ref 128642 // Timer
+      end
+
+      attribute 129666 "chaine"
+	private explicit_type "String"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128258 "Zone"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      class 129666 "MODE_ZONE"
+	visibility package stereotype "enum"
+	cpp_decl "${comment}enum ${name} {
+${items}};
+"
+	java_decl ""
+	php_decl ""
+	python_2_2 python_decl ""
+	idl_decl ""
+	explicit_switch_type ""
+	mysql_decl ""
+	
+	attribute 136066 "MODE_MANUEL"
+	  public type class_ref 129666 // MODE_ZONE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 136194 "MODE_PROGRAMME"
+	  public type class_ref 129666 // MODE_ZONE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 136322 "MODE_AUTOMATIQUE"
+	  public type class_ref 129666 // MODE_ZONE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+      end
+
+      class 129794 "ETAT_ZONE"
+	visibility package stereotype "enum"
+	cpp_decl "${comment}enum ${name} {
+${items}};
+"
+	java_decl ""
+	php_decl ""
+	python_2_2 python_decl ""
+	idl_decl ""
+	explicit_switch_type ""
+	mysql_decl ""
+	
+	attribute 136450 "ATTENTE"
+	  public type class_ref 129794 // ETAT_ZONE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 136578 "REPOS"
+	  public type class_ref 129794 // ETAT_ZONE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 136706 "ARROSAGE"
+	  public type class_ref 129794 // ETAT_ZONE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+      end
+
+      operation 136066 "Zone"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 4
+	  param in name "nbZone" explicit_type "int"
+	  param in name "_commandeVanne" explicit_type "gpio_num_t"
+	  param in name "_brocheHumidite" explicit_type "gpio_num_t"
+	  param inout name "_cycles" type class_ref 128514 // CyclesArrossage
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}, ${t3} * ${p3}${v3}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Zone::Zone
+//@param int nbZone permet de connaitre le nom de la zone
+//@param gpio_num_t _commandeVanne c'est la broche de la vanne à gérer
+//@param gpio_num_t _brocheHumidite, c'est la broche du capteur d'humidité
+//@details Constructeur de la classe.
+//
+
+${inline}${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} * ${p3}${)}:
+numZone(nbZone),
+laVanne(_commandeVanne),
+leCapteur(_brocheHumidite),
+cycles(_cycles)
+${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136194 "~Zone"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${virtual}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Zone::~Zone
+//@details Déstructeur de la classe.
+//
+
+${inline}${class}::${name}${(}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136322 "Controler"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 2
+	  param in name "_parametre" explicit_type "String"
+	  param in name "now" explicit_type "DateTime"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Zone::Controler
+//@param string _parametre, c'est la chaine que renvoie l'application lorsqu'une action est effectuée 
+//@details Si la chaine de caractère reçue commence par un m, alors on passe en mode manuel et l'ouverture ou la fermeture dependera du caractère suivant.
+//@details Si elle commence par un p on passe en mode programmé et si elle commence par un a alors on passe en mode auto.
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136450 "ModifierDateHeure"
+	public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 136578 "ModifierSeuilHumidite"
+	public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 136706 "ModifierPeriodicite"
+	public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 136834 "ModifierDuree"
+	public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      classrelation 129666 // etatMode (<directional composition>)
+	relation 129666 *-->
+	  a role_name "etatMode" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 129666 // etatMode (<directional composition>)
+	  b parent class_ref 129666 // MODE_ZONE
+      end
+
+      classrelation 129794 // etatZone (<directional composition>)
+	relation 129794 *-->
+	  a role_name "etatZone" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 129794 // etatZone (<directional composition>)
+	  b parent class_ref 129794 // ETAT_ZONE
+      end
+
+      attribute 136834 "numZone"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 136962 "incoming"
+	private explicit_type "String"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129922 // laVanne (<directional composition>)
+	relation 129922 *-->
+	  a role_name "laVanne" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 129922 // laVanne (<directional composition>)
+	  b parent class_ref 129410 // Vanne
+      end
+
+      classrelation 130050 // leCapteur (<directional composition>)
+	relation 130050 *-->
+	  a role_name "leCapteur" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 130050 // leCapteur (<directional composition>)
+	  b parent class_ref 129282 // Humidite
+      end
+
+      classrelation 130178 // cycles (<unidirectional association>)
+	relation 130178 --->
+	  a role_name "cycles" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 130178 // cycles (<unidirectional association>)
+	  b parent class_ref 128514 // CyclesArrossage
+      end
+
+      attribute 137090 "seuilMin"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 137218 "seuilMax"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 137346 "mesureHumidite"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 137474 "duree"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 137602 "periode"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 130306 // date (<directional composition>)
+	relation 130306 *-->
+	  a role_name "date" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 130306 // date (<directional composition>)
+	  b parent class_ref 128898 // Date
+      end
+
+      classrelation 130434 // heureDep (<directional composition>)
+	relation 130434 *-->
+	  a role_name "heureDep" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 130434 // heureDep (<directional composition>)
+	  b parent class_ref 129154 // Heure
+      end
+
+      attribute 137730 "ladateExacte"
+	private explicit_type "String"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 130562 // timerHumidite (<directional composition>)
+	relation 130562 *-->
+	  a role_name "timerHumidite" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 130562 // timerHumidite (<directional composition>)
+	  b parent class_ref 128642 // Timer
+      end
+
+      classrelation 130690 // timerTemps (<directional composition>)
+	relation 130690 *-->
+	  a role_name "timerTemps" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 130690 // timerTemps (<directional composition>)
+	  b parent class_ref 128642 // Timer
+      end
+
+      classrelation 130818 // recupHeure (<unidirectional association>)
+	relation 130818 --->
+	  a role_name "recupHeure" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 130818 // recupHeure (<unidirectional association>)
+	  b parent class_ref 128386 // StockageDonnees
+      end
+    end
+
+    class 128386 "StockageDonnees"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 131074 "StockageDonnees"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::StockageDonnees() 
+//@details Constructeur
+//
+
+${inline}${class}::${name}${(}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 131202 "~StockageDonnees"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${virtual}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::~StockageDonnees() 
+//@details Destructeur
+//
+
+${inline}${class}::${name}${(}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 131330 "EnvoyerDonneesBdd"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "conn" explicit_type "MySQL_Connection"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::EnvoyerDonneesBdd
+//@param conn
+//@details Permet d'envoyer les données à la base
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 131458 "EnregistrerDonneesFichierLocal"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 3
+	  param in name "temperature" explicit_type "float"
+	  param in name "hygrometrie" explicit_type "float"
+	  param in name "luminosite" explicit_type "float"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::EnregistrerDonneesFichierLocal
+//@param temperature
+//@param hygrometrie
+//@param luminosite
+//@details Permet d'enregistrer les données meterologiques dans un fichier sur la carte SD
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${const}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 131586 "LireDonneesFichierLocal"
+	preserve_cpp_body_indent public explicit_return_type "String"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::LireDonneesFichierLocal
+//@details Permet de lire les données présentes dans le fichier local
+//@return String contenant une ligne de données du fichier
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 131714 "ControlerFichier"
+	public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 131842 "ConnexionWifi"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::ConnexionWifi
+//@details Permet de se connecter à un réseau wifi
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 131970 "ConnexionServeur"
+	preserve_cpp_body_indent public explicit_return_type "MySQL_Connection"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::ConnexionServeur
+//@details Permet de se connecter au serveur ou se trouve la base de données
+//@return conn
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132098 "MemoriserIncidentPerteConnexion"
+	public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 132226 "DefinirParametresCarte"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::DefinirParametresCarte
+//@details Permet de définir les adresses ip et mac de la carte
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132354 "InsererDonneesMesuresInterieurSerre"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 3
+	  param in name "temperature" explicit_type "float"
+	  param in name "hygrometrie" explicit_type "float"
+	  param in name "luminosite" explicit_type "float"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::InsererDonneesMesuresInterieurSerre
+//@param temperature
+//@param hygrometrie
+//@param luminosite
+//@details Permet d'insérer les données météorologiques dans la requête sql
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${const}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132482 "InsererDonneesMesuresZone"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 2
+	  param in name "debitEau" explicit_type "float"
+	  param in name "humiditeSol" explicit_type "float"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::InsererDonneesMesuresZone
+//@param debitEau
+//@param humiditeSol
+//@details Permet d'insérer dans la requête SQL les données de débit d'eau, d'humidité
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132610 "VerifierConnexionWifi"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::VerifierConnexionWifi
+//@details Permet de vérifier si l'ESP32 est toujours connecté au wifi
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132738 "VerifierConnexionServeur"
+	preserve_cpp_body_indent public explicit_return_type "MySQL_Connection"
+	nparams 1
+	  param in name "conn2" explicit_type "MySQL_Connection"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::VerifierConnexionServeur
+//@param conn
+//@details Permet de se vérifier si l'ESP32 est toujours connecté au serveur
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132866 "OuvrirFichierDonneesMeteorologiquesLecture"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::OuvrirFichierDonneesMeteorologiquesLecture
+//@details Permet d'ouvrir en lecture le fichier des donnees meteorologiques
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132994 "OuvrirFichierDonneesMeteorologiquesEcriture"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::OuvrirFichierDonneesMeteorologiquesEcriture
+//@details Permet d'ouvrir en écriture le fichier des donnees meteorologiques
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 133122 "OuvrirFichierSeuilEcriture"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::OuvrirFichierSeuilEcriture
+//@details Permet d'ouvrir le fichier de données des seuils en écriture
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 133250 "RecupereDate"
+	preserve_cpp_body_indent public explicit_return_type "String"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::RecupereDate
+//@details Permet de récupérer la date
+//@return une chaine de caractère contenant la date
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 133378 "VerifierDonneesFichierLocal"
+	public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 133506 "MemoriserDonneesFichierLocal"
+	public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 133634 "RecupererSeuilsVannes"
+	preserve_cpp_body_indent public explicit_return_type "String"
+	nparams 1
+	  param in name "conn" explicit_type "MySQL_Connection"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::RecupererSeuilsVannes
+//@param MySQL_Connection conn
+//@details Permet de récupérer les seuils des vannes dans la base de données
+//@return String
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 133762 "EnregistrerDonneesZonesFichierLocal"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 2
+	  param in name "humiditeDuSol" explicit_type "float"
+	  param in name "debitEau" explicit_type "float"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::EnregistrerDonneesZonesFichierLocal
+//@param hygrometrie
+//@param debitEau
+//@details Permet d'enregistrer l'humidité du sol et du débit d'eau dans le fichier
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 133890 "InsererDonneesMesuresLocalesInterieurSerre"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "chaine" explicit_type "String"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::InsererDonneesMesuresLocalesInterieurSerre
+//@param chaine
+//@details Permet d'insérer les données du fichier local dans la requête SQL
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134018 "EnvoyerDonneesLocalesBdd"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "conn" explicit_type "MySQL_Connection"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::EnvoyerDonneesLocalesBdd
+//@param conn
+//@details Permet d'envoyer les données du fichier local dans la base de données
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134146 "EnregistrerDonneesSeuilsFichierLocal"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "chaine" explicit_type "String"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::EnregistrerDonneesSeuilsFichierLocal
+//@param chaine
+//@details Permet d'enregistrer les seuils dans le fichier local
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134274 "OuvrirFichierZoneEcriture"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::OuvrirFichierZoneEcriture
+//@details Permet d'ouvrir le fichier de données des zones en écriture
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134402 "RecupererModeProgramme"
+	preserve_cpp_body_indent public explicit_return_type "String"
+	nparams 1
+	  param in name "conn" explicit_type "MySQL_Connection"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::RecupererModeProgramme
+//@param chaine
+//@details Permet de recuperer les donnees necessaire au fonctionnement du mode programme
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134530 "EnregistrerDonneesRecupererModeProgrammeFichierLocal"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "chaine" explicit_type "String"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::EnregistrerDonneesRecupererModeProgrammeFichierLocal
+//@param chaine
+//@details Permet d'enregistrer les donnees du mode programe
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134658 "OuvrirFichierModeProgramme"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief StockageDonnees::OuvrirFichierModeProgramme
+//@details Permet d'ouvrir le fichier de données du mode programmé
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 131586 "client"
+	public explicit_type "WiFiClient"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131714 "fermeture"
+	public explicit_type "boolean"
+	init_value "=  false"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131842 "fichier"
+	public explicit_type "File"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131970 "fichierModeProgramme"
+	public explicit_type "File"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132098 "now"
+	public explicit_type "DateTime"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132226 "status"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132354 "rtc"
+	private explicit_type "RTC_DS3231"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132482 "requeteMesureInterieur"
+	private explicit_type "String"
+	init_value "=  \" \""
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132610 "requeteMesureZone"
+	private explicit_type "String"
+	init_value "=  \" \""
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132738 "requeteMesureLocaleInterieur"
+	private explicit_type "String"
+	init_value "=  \"\""
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132866 "cursor"
+	private explicit_type "MySQL_Cursor"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132994 "conn"
+	private explicit_type "MySQL_Connection"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 133122 "fichierZone"
+	private explicit_type "File"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 133250 "fichierSeuils"
+	private explicit_type "File"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129282 // attentes (<directional composition>)
+	relation 129282 *-->
+	  a role_name "attentes" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 129282 // attentes (<directional composition>)
+	  b parent class_ref 128642 // Timer
+      end
+
+      attribute 133378 "ESP32Mac"
+	private explicit_type "byte"
+	multiplicity "[6]"
+	init_value "=  { 0xDE , 0xAD , 0xBE , 0xEF , 0xFE , 0xED }"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Paramètres de la carte
+"
+      end
+
+      attribute 133506 "ESP32Addr"
+	private explicit_type "IPAddress"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 133634 "serverAddr"
+	private explicit_type "IPAddress"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Informations du serveur
+ Adresse IP du serveur raspberry pi"
+      end
+
+      attribute 133762 "loginUtilisateurServeur"
+	private explicit_type "char"
+	multiplicity "[50]"
+	init_value "=  IDSERVEUR"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment " login de l'utilisateur du serveur"
+      end
+
+      attribute 133890 "mdpUtilisateurServeur"
+	private explicit_type "char"
+	multiplicity "[50]"
+	init_value "=  MDPSERVEUR"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment " mdp de l'utilisateur du serveur"
+      end
+
+      attribute 134018 "loginWIFI"
+	private explicit_type "char"
+	multiplicity "[50]"
+	init_value "=  IDWIFI"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment " Informations Wifi
+  login SSID"
+      end
+
+      attribute 134146 "mdpWIFI"
+	private explicit_type "char"
+	multiplicity "[50]"
+	init_value "=  MDPWIFI"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "  mot de passe SSID"
+      end
+    end
+
+    class 128514 "CyclesArrossage"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 129282 "CyclesArrossage"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "_brocheCarteSD" explicit_type "gpio_num_t"
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${class}::${name}${(}${t0} ${p0}${)}:
+brocheCarteSD(_brocheCarteSD)
+${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 129410 "LireCarteSD"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 129538 "LireCarteSDModeProg"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 129666 "ObtenirSeuilMax"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 1
+	  param in name "_zone" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 129794 "ObtenirSeuilMin"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 1
+	  param in name "_zone" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 129922 "ObtenirDuree"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 1
+	  param in name "_zone" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 130050 "ObtenirPeriode"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 1
+	  param in name "_zone" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 130178 "ObtenirDate"
+	preserve_cpp_body_indent public return_type class_ref 128898 // Date
+	nparams 1
+	  param in name "_zone" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 130306 "ObtenirHeure"
+	preserve_cpp_body_indent public return_type class_ref 129154 // Heure
+	nparams 1
+	  param in name "_zone" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 130562 "brocheCarteSD"
+	private explicit_type "gpio_num_t"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130690 "seuilZoneMin"
+	private explicit_type "int"
+	multiplicity "[4]"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130818 "seuilZoneMax"
+	private explicit_type "int"
+	multiplicity "[4]"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130946 "valeurDefaut"
+	private explicit_type "bool"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129026 // dateDepart (<directional composition>)
+	relation 129026 *-->
+	  a role_name "dateDepart" multiplicity "[4]" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${value};
+"
+	    classrelation_ref 129026 // dateDepart (<directional composition>)
+	  b parent class_ref 128898 // Date
+      end
+
+      classrelation 129154 // heureDepart (<directional composition>)
+	relation 129154 *-->
+	  a role_name "heureDepart" multiplicity "[4]" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${value};
+"
+	    classrelation_ref 129154 // heureDepart (<directional composition>)
+	  b parent class_ref 129154 // Heure
+      end
+
+      attribute 131074 "duree"
+	private explicit_type "int"
+	multiplicity "[4]"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131202 "periodicite"
+	private explicit_type "int"
+	multiplicity "[4]"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${multiplicity}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 130434 "ConvertirDate"
+	preserve_cpp_body_indent private explicit_return_type "void"
+	nparams 2
+	  param in name "dateStr" explicit_type "String"
+	  param inout name "ladate" type class_ref 128898 // Date
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} * ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 130562 "ConvertirHeure"
+	preserve_cpp_body_indent private explicit_return_type "void"
+	nparams 2
+	  param in name "heureStr" explicit_type "String"
+	  param inout name "heure" type class_ref 129154 // Heure
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} * ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 128642 "Timer"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 134786 "Timer"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "_unCoup" explicit_type "bool"
+	    defaultvalue "false"
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Timer::Timer
+//@param _unCoup permet de définir le mode du timer par défaut mode infini, si true alors une seule fois
+//@details Constructeur de la classe. Le timer est inactif, il faut appelé Lancer ensuite.
+//
+
+${inline}${class}::${name}${(}${t0} ${p0}${)}:
+unCoup(_unCoup),
+actif(false)
+${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134914 "Lancer"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "_milliSecondes" explicit_type "ulong"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Timer::Lancer
+//@param _milliSecondes Durée de la tempo
+//@details Lance le timer avec le temps en millisecondes
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135042 "Lancer"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 3
+	  param in name "_heures" explicit_type "int"
+	  param in name "_minutes" explicit_type "int"
+	  param in name "_secondes" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Timer::Lancer
+//@param _heures
+//@param _minutes
+//@param _secondes
+//@details Lance le timer avec le temps exprimé en heures, minutes, secondes
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${const}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135170 "Arreter"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135298 "Scruter"
+	preserve_cpp_body_indent public explicit_return_type "bool"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Timer::Scruter
+//@return vrai si le temps est écoulé, faux sinon
+//@details Si le timer est configuré pour une seule fois, l'attribut actif repasse à faux
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 134274 "millisecondes"
+	private explicit_type "ulong"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "/ Durée de l'attente"
+      end
+
+      attribute 134402 "valeurPrecedente"
+	private explicit_type "ulong"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "/ valeur du temps précédent"
+      end
+
+      attribute 134530 "unCoup"
+	private explicit_type "bool"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "/ Mode du timer vrai une seule fois, faux mode infini"
+      end
+
+      attribute 134658 "actif"
+	private explicit_type "bool"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "/ Etat du timer vrai pour actif"
+      end
+    end
+
+    class 128770 "uneDate"
+      visibility package stereotype "struct"
+      cpp_decl "${comment}${template}struct ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129794 "jour"
+	public explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129922 "mois"
+	public explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130050 "annee"
+	public explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128898 "Date"
+      visibility package stereotype "typedef" base_type class_ref 128770 // uneDate
+      cpp_decl "${comment}typedef struct ${type} ${name};
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128770 // <dependency>
+	relation 128770 -_->
+	  a public
+	    cpp default "#include in source"
+	    classrelation_ref 128770 // <dependency>
+	  b parent class_ref 128770 // uneDate
+      end
+    end
+
+    class 129026 "uneHeure"
+      visibility package stereotype "struct"
+      cpp_decl "${comment}${template}struct ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130178 "heure"
+	public explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130306 "minutes"
+	public explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130434 "secondes"
+	public explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 129154 "Heure"
+      visibility package stereotype "typedef" base_type class_ref 129026 // uneHeure
+      cpp_decl "${comment}typedef struct ${type} ${name};
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128898 // <dependency>
+	relation 128898 -_->
+	  a public
+	    cpp default "#include in source"
+	    classrelation_ref 128898 // <dependency>
+	  b parent class_ref 129026 // uneHeure
+      end
+    end
+
+    class 129282 "Humidite"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 130690 "Humidite"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "_brocheMesure" explicit_type "gpio_num_t"
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Humidite::Humidite
+//@param gpio_num_t _brocheMesure c'est le numéro de la broche du capteur d'humidité
+//@details Constructeur de la classe
+//
+
+${inline}${class}::${name}${(}${t0} ${p0}${)}:
+YL69Pin(_brocheMesure)
+${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 130818 "~Humidite"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${virtual}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Humidite::~Humidite
+//@param gpio_num_t _brocheMesure c'est le numéro de la broche du capteur d'humidité
+//@details Déstructeur de la classe
+//
+
+${inline}${class}::${name}${(}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 130946 "PreleverHumidite"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Humidite::PreleverHumidite
+//@details On va venir lire le capteur et récuperer le taux d'humidité que l'on va convertir en pourcentage
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 131330 "YL69Pin"
+	const_attribute private explicit_type "int"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131458 "pourcentage"
+	private explicit_type "int"
+	init_value "=  0"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 129410 "Vanne"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      class 129538 "ETAT_VANNE"
+	visibility package stereotype "enum"
+	cpp_decl "${comment}enum ${name} {
+${items}};
+"
+	java_decl ""
+	php_decl ""
+	python_2_2 python_decl ""
+	idl_decl ""
+	explicit_switch_type ""
+	mysql_decl ""
+	
+	attribute 134786 "REPOS"
+	  public type class_ref 129538 // ETAT_VANNE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 134914 "OUVERT"
+	  public type class_ref 129538 // ETAT_VANNE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 135042 "FERMER"
+	  public type class_ref 129538 // ETAT_VANNE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 135170 "EN_OUVERTURE"
+	  public type class_ref 129538 // ETAT_VANNE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 135298 "EN_FERMETURE"
+	  public type class_ref 129538 // ETAT_VANNE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 135426 "EN_ATTENTE_OUVERTURE"
+	  public type class_ref 129538 // ETAT_VANNE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 135554 "EN_ATTENTE_FERMETURE"
+	  public type class_ref 129538 // ETAT_VANNE
+	  cpp_decl "  ${name}${value},${comment}"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+      end
+
+      operation 135426 "Vanne"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "_brocheImpulsion" explicit_type "gpio_num_t"
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Vanne::Vanne 
+//@paramgpio_num_t _brocheImpulsion, c'est le numéro de la broche sur laquelle on enverra l'impulsion
+//@details Constructeur de la classe.
+//
+
+${inline}${class}::${name}${(}${t0} ${p0}${)}:
+sensA(SENS_A),
+sensB(SENS_B)
+${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135554 "~Vanne"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${virtual}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${class}::${name}${(}${)}${volatile}${throw} {
+  ${body}}
+"
+	
+	
+	
+	
+	comment "SensA(gpio_num_t _SensA);
+SensB(gpio_num_t _SensB);"
+      end
+
+      operation 135682 "Ouvrir"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Vanne::Ouvrir
+//@details Si il n'y a pas de mutex alors on configure les broches en ouverture et on lance le TimerImpulsion pendant 250ms
+//@details Sinon, on attend l'ouverture
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135810 "Fermer"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Vanne::Fermer
+//@details Si il n'y a pas de mutex alors on configure les broches en fermeture et on lance le TimerImpulsion pendant 250ms
+//@details Sinon, on attend la fermeture
+//
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135938 "Controler"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 1
+	  param in name "commande" explicit_type "char"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//@brief Vanne::Controler
+//@param char commande  
+//@details On va regarder l'état de la vanne et effectuer une action en fonction de son état.
+//
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 135682 "brocheImpulsion"
+	private explicit_type "gpio_num_t"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129410 // timerImpulsion (<directional composition>)
+	relation 129410 *-->
+	  a role_name "timerImpulsion" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 129410 // timerImpulsion (<directional composition>)
+	  b parent class_ref 128642 // Timer
+      end
+
+      attribute 135810 "sensA"
+	const_attribute private explicit_type "gpio_num_t"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135938 "sensB"
+	const_attribute private explicit_type "gpio_num_t"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129538 // etat (<directional composition>)
+	relation 129538 *-->
+	  a role_name "etat" private
+	    comment "gpio_num_t sensA;
+gpio_num_t sensB; 
+"
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 129538 // etat (<directional composition>)
+	  b parent class_ref 129538 // ETAT_VANNE
+      end
+    end
+  end
+
+  deploymentview 128130 "GestionSerre"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128002 "Capteur"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128002 // Capteur
+      end
+    end
+
+    artifact 128130 "controleurDeSerre"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128130 // ControleurDeSerre
+      end
+    end
+
+    artifact 128258 "CyclesArrossage"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128770 // uneDate
+	class_ref 128898 // Date
+	class_ref 129026 // uneHeure
+	class_ref 129154 // Heure
+	class_ref 128514 // CyclesArrossage
+      end
+    end
+
+    artifact 128386 "humidite"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 129282 // Humidite
+      end
+    end
+
+    artifact 128514 "StockageDonnees"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128386 // StockageDonnees
+      end
+    end
+
+    artifact 128642 "timer"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128642 // Timer
+      end
+    end
+
+    artifact 128770 "vanne"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 129410 // Vanne
+      end
+    end
+
+    artifact 128898 "zone"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128258 // Zone
+      end
+    end
+  end
+end
